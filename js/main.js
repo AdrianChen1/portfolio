@@ -88,7 +88,7 @@ function initMorphingImages() {
     const captions = [
         { title: 'A Spirit Moves On', location: 'A half-exposure image captured in Buckman Tavern in Lexington, Massachusetts' },
         { title: 'The Carpenter', location: 'Captured in Plymouth Patuxet Historical Museum' },
-        { title: 'Standing Strong', location: 'A powerful display captured at Lexington Battle Green, capturing the essence of a reenactor' }
+        { title: 'Standing Strong', location: 'A powerful, low angle display of a reenactor contrasted against vibrant Autumn foliage' }
     ];
 
     let currentCaption = 0;
