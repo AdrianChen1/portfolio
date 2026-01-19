@@ -86,9 +86,9 @@ function initMorphingImages() {
     console.log('Morphing animation initialized successfully');
 
     const captions = [
+        { title: 'A Spirit Moves On', location: 'A half-exposure image captured in Buckman Tavern in Lexington, Massachusetts' },
         { title: 'The Carpenter', location: 'Captured in Plymouth Patuxet Historical Museum' },
-        { title: 'A Spirit Moves On', location: 'Captured using my signature half-exposure technique, I appear dressed in colonial garb, ghostlike, in a transitory state between the living and spiritual realm.' },
-        { title: 'Standing Strong', location: 'Dressed in traditional colonial clothing, a reenactor stands proud against the Autumn leaves.' }
+        { title: 'Standing Strong', location: 'A powerful display captured at Lexington Battle Green, capturing the essence of a reenactor' }
     ];
 
     let currentCaption = 0;
@@ -164,6 +164,7 @@ function initMorphingImages() {
             img2.style.opacity = String(localProgress);
             img3.style.opacity = '0';
 
+            // Update caption at halfway point (0.5 opacity) for smooth transitions
             if (localProgress < 0.5) {
                 updateCaption(0);
             } else {
@@ -176,6 +177,7 @@ function initMorphingImages() {
             img2.style.opacity = String(1 - localProgress);
             img3.style.opacity = String(localProgress);
 
+            // Update caption at halfway point (0.5 opacity) for smooth transitions
             if (localProgress < 0.5) {
                 updateCaption(1);
             } else {

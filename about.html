@@ -69,36 +69,105 @@
         </div>
     </section>
 
-    <!-- Bio Section -->
-    <section>
-        <div class="container-narrow">
-            <div class="reveal">
-                <h2 class="text-center mb-lg">Hello, I'm Adrian</h2>
-                <p>
-                    I'm a high school student at Belmont Hill School with a deep passion for storytelling, history, and
-                    creative
-                    expression. As an Eagle Scout with Troop 10 in Lexington, Massachusetts, I've had the privilege of
-                    working intimately with the Lexington Historical Society on a meaningful project to refurbish the
-                    Buckman Tavern garden ahead of Lexington's 250th anniversary celebrations.
-                </p>
-                <p>
-                    This project was more than just community service—it was a profound connection to the place where
-                    Revolutionary history came alive. Working alongside historians to preserve this historic site
-                    deepened
-                    my understanding of how physical spaces hold memory and meaning. It's this experience that drives my
-                    photography and journalism: the desire to connect with my culture, bridge past and present, and
-                    continue this legacy of preservation.
-                </p>
-                <p>
-                    Through my lens and my writing, I explore how revolutionary ideals continue to shape our modern
-                    world.
-                    My involvement with the Fife and Drum Corps further grounds this work in lived experience, allowing
-                    me
-                    to embody the traditions I document. I create not just to showcase technical skill, but to honor the
-                    stories that shaped our community and to ensure they resonate with future generations.
-                </p>
+    <!-- Bio Section with Step-by-Step Reveals -->
+    <section class="bio-reveals" style="background: #F7F5F2; padding: 8rem 0 4rem 0;">
+        <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 2rem;">
+            <h2 style="text-align: center; margin-bottom: 4rem; color: #1C1C1C; font-size: 2.5rem;">Hello, I'm Adrian!
+            </h2>
+
+            <!-- Reveal 1: Academic Achievement -->
+            <div class="bio-reveal reveal"
+                style="display: flex; align-items: center; gap: 3rem; margin-bottom: 6rem; min-height: 400px;">
+                <div style="flex: 1;">
+                    <img src="images/photography/academicachievement.jpg" alt="Academic Achievement"
+                        style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+                </div>
+                <div style="flex: 1;">
+                    <p style="font-size: 1.125rem; line-height: 1.8; color: #1C1C1C;">
+                        I'm a high-honor roll student at Belmont Hill School with a deep passion for journalism and
+                        creative expression.
+                        As Marketing Coordinator and Graphic Designer for our nationally top-ranked drones team and news
+                        editor for my school's
+                        newspaper, I've developed a strong foundation in visual storytelling and strategic
+                        communication. These experiences
+                        have shaped my approach to photography and writing—combining technical precision with compelling
+                        narratives that
+                        engage and inform diverse audiences.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Reveal 2: Eagle Scout -->
+            <div class="bio-reveal reveal"
+                style="display: flex; align-items: center; gap: 3rem; margin-bottom: 6rem; min-height: 400px; flex-direction: row-reverse;">
+                <div style="flex: 1;">
+                    <img src="images/photography/EagleScout.jpg" alt="Eagle Scout"
+                        style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+                </div>
+                <div style="flex: 1;">
+                    <p style="font-size: 1.125rem; line-height: 1.8; color: #1C1C1C;">
+                        As an Eagle Scout with Troop 10 in Lexington, Massachusetts, I had the privilege of working
+                        intimately with the
+                        Lexington Historical Society on a meaningful project to refurbish the Buckman Tavern garden
+                        ahead of Lexington's
+                        250th anniversary celebrations. This project was more than community service—it was a profound
+                        connection to the
+                        place where Revolutionary history came alive. Working alongside historians to preserve this
+                        historic site deepened
+                        my understanding of how physical spaces hold memory and meaning, driving my commitment to
+                        preserving stories through
+                        photography and journalism.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Reveal 3: Fife and Drum -->
+            <div class="bio-reveal reveal"
+                style="display: flex; align-items: center; gap: 3rem; margin-bottom: 2rem; min-height: 400px;">
+                <div style="flex: 1;">
+                    <img src="images/photography/Outfit.jpg" alt="Historical Outfit"
+                        style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+                </div>
+                <div style="flex: 1;">
+                    <p style="font-size: 1.125rem; line-height: 1.8; color: #1C1C1C;">
+                        My involvement with the William Diamond Fife and Drum Corps grounds this work in lived
+                        experience. Through
+                        performing Revolutionary War era music across New England, I embody the traditions I document.
+                        This firsthand
+                        connection to history informs my photography and journalism, allowing me to capture not just
+                        images and words,
+                        but the spirit of revolutionary ideals that continue to resonate today. I create to honor the
+                        stories that
+                        shaped our community and ensure they inspire future generations.
+                    </p>
+                </div>
             </div>
         </div>
+
+        <style>
+            /* Mobile responsive styles */
+            @media (max-width: 768px) {
+                .bio-reveals h2 {
+                    font-size: 2rem !important;
+                    margin-bottom: 2rem !important;
+                }
+
+                .bio-reveal {
+                    flex-direction: column !important;
+                    margin-bottom: 3rem !important;
+                    min-height: auto !important;
+                    gap: 1.5rem !important;
+                }
+
+                .bio-reveal div {
+                    flex: 1 1 100% !important;
+                }
+
+                .bio-reveal p {
+                    font-size: 1rem !important;
+                }
+            }
+        </style>
     </section>
 
     <!-- Fife and Drum Corps Section -->
@@ -242,6 +311,8 @@
                 <div class="mt-lg">
                     <p class="text-small text-secondary">
                         Email: adriancngu@gmail.com<br>
+                        LinkedIn: <a href="https://www.linkedin.com/in/adrianchenbh/" target="_blank"
+                            rel="noopener noreferrer">linkedin.com/in/adrianchenbh</a><br>
                         Location: Lexington, Massachusetts<br>
                         Available for: Projects, Collaborations, Commissions
                     </p>
@@ -269,6 +340,8 @@
                 <div class="footer-section">
                     <h3>Connect</h3>
                     <p>Email: <a href="mailto:adriancngu@gmail.com">adriancngu@gmail.com</a></p>
+                    <p>LinkedIn: <a href="https://www.linkedin.com/in/adrianchenbh/" target="_blank"
+                            rel="noopener noreferrer">linkedin.com/in/adrianchenbh</a></p>
                 </div>
             </div>
 
