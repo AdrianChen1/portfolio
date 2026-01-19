@@ -1,0 +1,25 @@
+PLACEHOLDER IMAGE INSTRUCTIONS
+
+Until you add your own images, you can use these online placeholder services by updating the HTML img src attributes:
+
+1. Simple color placeholders:
+   https://placehold.co/800x600/1A1A1A/FFFFFF?text=Your+Text
+
+2. Random photos:
+   https://picsum.photos/800/600
+
+3. Unsplash random:
+   https://source.unsplash.com/800x600/?photography
+
+Example replacements in HTML:
+<img src="https://placehold.co/800x600/1A1A1A/FFFFFF?text=Photography" alt="Photo">
+
+OR create simple placeholder files using this command:
+# For Mac/Linux:
+for dir in hero about articles photography projects; do
+  cd $dir 2>/dev/null || continue
+  for i in {1..3}; do
+    convert -size 800x600 xc:#1A1A1A -pointsize 40 -fill white -gravity center -annotate +0+0 "Placeholder" placeholder-$i.jpg 2>/dev/null || echo "ImageMagick not installed"
+  done
+  cd ..
+done

@@ -1,14 +1,242 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello World</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Adrian Chen - Photographer, Journalist, and Storyteller. Showcasing photography, journalism, and creative projects rooted in revolutionary and historical ideals.">
+  <meta name="author" content="Adrian Chen">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Adrian Chen - Portfolio">
+  <meta property="og:description" content="Photographer, Journalist, and Storyteller">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yourdomain.com">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Adrian Chen - Portfolio">
+  <meta name="twitter:description" content="Photographer, Journalist, and Storyteller">
+  
+  <title>Adrian Chen - Portfolio</title>
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/navigation.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
 </head>
-
 <body>
-    <h1>Hello World</h1>
-</body>
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">Adrian Chen</a>
+      
+      <div class="nav-toggle">
+        <span class="nav-toggle-line"></span>
+        <span class="nav-toggle-line"></span>
+        <span class="nav-toggle-line"></span>
+      </div>
+      
+      <ul class="nav-menu">
+        <li class="nav-item">
+          <a href="index.html" class="nav-link active">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="about.html" class="nav-link">About</a>
+        </li>
+        <li class="nav-item">
+          <a href="journalism/index.html" class="nav-link">Journalism</a>
+          <ul class="nav-dropdown">
+            <li><a href="journalism/articles/index.html" class="nav-dropdown-link">Articles</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a href="photography.html" class="nav-link">Photography</a>
+        </li>
+        <li class="nav-item">
+          <a href="projects.html" class="nav-link">Projects</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
 
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content reveal">
+      <h1 class="hero-title">Adrian Chen</h1>
+      <p class="hero-subtitle">Photographer · Journalist · Storyteller</p>
+      <div class="mt-lg">
+        <a href="#introduction" class="btn">Explore My Work</a>
+      </div>
+    </div>
+    
+    <div class="hero-scroll-indicator">
+      <span class="hero-scroll-text">Scroll</span>
+      <div class="hero-scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- Introduction Section -->
+  <section id="introduction" class="section-alt">
+    <div class="container-narrow">
+      <div class="reveal text-center">
+        <h2>Capturing History Through Modern Eyes</h2>
+        <p class="mt-md text-secondary">
+          I'm a high school sophomore passionate about preserving and sharing stories that matter. 
+          Through photography and journalism, I explore the intersection of revolutionary ideals 
+          and contemporary creativity, drawing inspiration from my experience with the Fife and Drum Corps.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Work Section -->
+  <section id="featured-work">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2 class="section-title">Featured Work</h2>
+        <p class="section-description">A selection of my recent photography and journalism projects</p>
+      </div>
+      
+      <div class="grid grid-3 reveal-stagger">
+        <!-- Featured Item 1 -->
+        <div class="card hover-lift">
+          <div class="card-image">
+            <img src="images/hero/placeholder-1.jpg" alt="Featured Photography Project" class="img-cover">
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Revolutionary Spirits</h3>
+            <p class="card-description">A photographic exploration of historical reenactment and the preservation of American heritage.</p>
+            <a href="photography.html" class="btn btn-outline mt-sm">View Project</a>
+          </div>
+        </div>
+        
+        <!-- Featured Item 2 -->
+        <div class="card hover-lift">
+          <div class="card-image">
+            <img src="images/hero/placeholder-2.jpg" alt="Featured Article" class="img-cover">
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">The Drum's Echo</h3>
+            <p class="card-description">An in-depth article on the cultural significance of Fife and Drum Corps in modern America.</p>
+            <a href="journalism/articles/index.html" class="btn btn-outline mt-sm">Read Article</a>
+          </div>
+        </div>
+        
+        <!-- Featured Item 3 -->
+        <div class="card hover-lift">
+          <div class="card-image">
+            <img src="images/hero/placeholder-3.jpg" alt="Long-term Project" class="img-cover">
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Living History</h3>
+            <p class="card-description">A multimedia project documenting my journey as a member of the Fife and Drum Corps.</p>
+            <a href="projects.html" class="btn btn-outline mt-sm">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Disciplines Section -->
+  <section id="disciplines" class="section-alt">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2 class="section-title">My Creative Disciplines</h2>
+        <p class="section-description">Exploring stories through multiple mediums</p>
+      </div>
+      
+      <div class="grid grid-3 reveal-stagger">
+        <!-- Photography -->
+        <a href="photography.html" class="card hover-scale">
+          <div class="card-image">
+            <img src="images/hero/photography-card.jpg" alt="Photography" class="img-cover">
+          </div>
+          <div class="card-content text-center">
+            <h3 class="card-title">Photography</h3>
+            <p class="card-description">Visual storytelling through the lens, capturing moments that preserve history and emotion.</p>
+          </div>
+        </a>
+        
+        <!-- Journalism -->
+        <a href="journalism/index.html" class="card hover-scale">
+          <div class="card-image">
+            <img src="images/hero/journalism-card.jpg" alt="Journalism" class="img-cover">
+          </div>
+          <div class="card-content text-center">
+            <h3 class="card-title">Journalism</h3>
+            <p class="card-description">In-depth writing that explores culture, history, and the human experience.</p>
+          </div>
+        </a>
+        
+        <!-- Projects -->
+        <a href="projects.html" class="card hover-scale">
+          <div class="card-image">
+            <img src="images/hero/projects-card.jpg" alt="Projects" class="img-cover">
+          </div>
+          <div class="card-content text-center">
+            <h3 class="card-title">Projects</h3>
+            <p class="card-description">Long-term creative endeavors that combine multiple disciplines and passions.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section id="cta">
+    <div class="container-narrow text-center reveal">
+      <h2>Let's Connect</h2>
+      <p class="mt-md text-secondary mb-lg">
+        I'm always interested in collaborating on meaningful projects or discussing 
+        history, photography, and storytelling. Whether you're a college admissions officer, 
+        potential employer, or fellow creative, I'd love to hear from you.
+      </p>
+      <a href="about.html#contact" class="btn">Get In Touch</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Adrian Chen</h3>
+          <p>Photographer, Journalist, and Storyteller based in [Your Location]</p>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <p><a href="about.html">About</a></p>
+          <p><a href="photography.html">Photography</a></p>
+          <p><a href="journalism/index.html">Journalism</a></p>
+          <p><a href="projects.html">Projects</a></p>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Connect</h3>
+          <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+          <div class="footer-social">
+            <!-- Add your social media links -->
+            <a href="#" aria-label="Instagram">📷</a>
+            <a href="#" aria-label="LinkedIn">💼</a>
+            <a href="#" aria-label="GitHub">🔗</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2026 Adrian Chen. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/scroll-animations.js"></script>
+</body>
 </html>
