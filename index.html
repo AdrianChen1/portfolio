@@ -68,20 +68,70 @@
                 <li class="nav-item">
                     <a href="photography.html" class="nav-link">Photography</a>
                 </li>
-                <li class="nav-item">
-                    <a href="projects.html" class="nav-link">Projects</a>
-                </li>
             </ul>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content reveal">
+    <section class="hero" style="position: relative; overflow: hidden;">
+        <!-- Rotating Photo Background -->
+        <div class="photo-carousel"
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; opacity: 0.35; overflow: hidden;">
+            <div class="carousel-track"
+                style="display: flex; animation: scrollCarousel 20s linear infinite; width: fit-content; gap: 0;">
+                <img src="images/photography/Living History - The March.jpg" alt=""
+                    style="height: 100vh; width: auto; object-fit: cover; flex-shrink: 0;">
+                <img src="images/photography/Revolutionary Spirit - Remembrance.jpg" alt=""
+                    style="height: 100vh; width: auto; object-fit: cover; flex-shrink: 0;">
+                <img src="images/photography/Living History - The Cannoneer.jpg" alt=""
+                    style="height: 100vh; width: auto; object-fit: cover; flex-shrink: 0;">
+                <img src="images/photography/Revolutionary Spirit - Remember the Fallen.jpg" alt=""
+                    style="height: 100vh; width: auto; object-fit: cover; flex-shrink: 0;">
+                <img src="images/photography/Revolutionary Spirit - The Carpenter.jpg" alt=""
+                    style="height: 100vh; width: auto; object-fit: cover; flex-shrink: 0;">
+                <img src="images/photography/Living History - A Well Needed Rest.jpg" alt=""
+                    style="height: 100vh; width: auto; object-fit: cover; flex-shrink: 0;">
+                <img src="images/photography/Living History - Rest at Last.jpg" alt=""
+                    style="height: 100vh; width: auto; object-fit: cover; flex-shrink: 0;">
+                <!-- Duplicate for seamless loop -->
+                <img src="images/photography/Living History - The March.jpg" alt=""
+                    style="height: 100vh; width: auto; object-fit: cover; flex-shrink: 0;">
+                <img src="images/photography/Revolutionary Spirit - Remembrance.jpg" alt=""
+                    style="height: 100vh; width: auto; object-fit: cover; flex-shrink: 0;">
+                <img src="images/photography/Living History - The Cannoneer.jpg" alt=""
+                    style="height: 100vh; width: auto; object-fit: cover; flex-shrink: 0;">
+                <img src="images/photography/Revolutionary Spirit - Remember the Fallen.jpg" alt=""
+                    style="height: 100vh; width: auto; object-fit: cover; flex-shrink: 0;">
+                <img src="images/photography/Revolutionary Spirit - The Carpenter.jpg" alt=""
+                    style="height: 100vh; width: auto; object-fit: cover; flex-shrink: 0;">
+                <img src="images/photography/Living History - A Well Needed Rest.jpg" alt=""
+                    style="height: 100vh; width: auto; object-fit: cover; flex-shrink: 0;">
+                <img src="images/photography/Living History - Rest at Last.jpg" alt=""
+                    style="height: 100vh; width: auto; object-fit: cover; flex-shrink: 0;">
+            </div>
+        </div>
+
+        <style>
+            @keyframes scrollCarousel {
+                from {
+                    transform: translateX(0%);
+                }
+
+                to {
+                    transform: translateX(-50%);
+                }
+            }
+
+            .carousel-track {
+                will-change: transform;
+            }
+        </style>
+
+        <div class="hero-content reveal" style="position: relative; z-index: 1;">
             <h1 class="hero-title">Adrian Chen</h1>
             <p class="hero-subtitle">Photographer · Journalist · Storyteller</p>
             <div class="mt-lg">
-                <a href="#introduction" class="btn">Explore My Work</a>
+                <a href="#featured-work" class="btn">Explore My Work</a>
             </div>
         </div>
 
@@ -117,13 +167,14 @@
                 <!-- Featured Item 1 -->
                 <div class="card hover-lift">
                     <div class="card-image">
-                        <img src="images/hero/placeholder-1.jpg" alt="Featured Photography Project" class="img-cover">
+                        <img src="images/photography/Revolutionary Spirit - A Call to the Dead.jpg"
+                            alt="Revolutionary Spirits" class="img-cover">
                     </div>
                     <div class="card-content">
                         <h3 class="card-title">Revolutionary Spirits</h3>
                         <p class="card-description">A photographic exploration of historical reenactment and the
                             preservation of American heritage.</p>
-                        <a href="photography.html" class="btn btn-outline mt-sm">View Project</a>
+                        <a href="photography.html#revolutionary-spirits" class="btn btn-outline mt-sm">View Project</a>
                     </div>
                 </div>
 
@@ -133,7 +184,7 @@
                         <img src="images/hero/placeholder-2.jpg" alt="Featured Article" class="img-cover">
                     </div>
                     <div class="card-content">
-                        <h3 class="card-title">The Drum's Echo</h3>
+                        <h3 class="card-title">Placeholder</h3>
                         <p class="card-description">An in-depth article on the cultural significance of Fife and Drum
                             Corps in modern America.</p>
                         <a href="journalism/articles/index.html" class="btn btn-outline mt-sm">Read Article</a>
@@ -143,13 +194,14 @@
                 <!-- Featured Item 3 -->
                 <div class="card hover-lift">
                     <div class="card-image">
-                        <img src="images/hero/placeholder-3.jpg" alt="Long-term Project" class="img-cover">
+                        <img src="images/photography/Living History - The Cannoneer.jpg" alt="Living History"
+                            class="img-cover">
                     </div>
                     <div class="card-content">
                         <h3 class="card-title">Living History</h3>
                         <p class="card-description">A multimedia project documenting my journey as a member of the Fife
                             and Drum Corps.</p>
-                        <a href="projects.html" class="btn btn-outline mt-sm">Learn More</a>
+                        <a href="photography.html#living-history" class="btn btn-outline mt-sm">View Project</a>
                     </div>
                 </div>
             </div>
@@ -165,15 +217,15 @@
             </div>
 
             <div class="grid grid-3 reveal-stagger">
-                <!-- Photography -->
-                <a href="photography.html" class="card hover-scale">
+                <!-- About -->
+                <a href="about.html" class="card hover-scale">
                     <div class="card-image">
-                        <img src="images/hero/photography-card.jpg" alt="Photography" class="img-cover">
+                        <img src="images/hero/projects-card.jpg" alt="About" class="img-cover">
                     </div>
                     <div class="card-content text-center">
-                        <h3 class="card-title">Photography</h3>
-                        <p class="card-description">Visual storytelling through the lens, capturing moments that
-                            preserve history and emotion.</p>
+                        <h3 class="card-title">About</h3>
+                        <p class="card-description">Learn more about my background, experience, and passion for
+                            preserving history.</p>
                     </div>
                 </a>
 
@@ -189,15 +241,15 @@
                     </div>
                 </a>
 
-                <!-- Projects -->
-                <a href="projects.html" class="card hover-scale">
+                <!-- Photography -->
+                <a href="photography.html" class="card hover-scale">
                     <div class="card-image">
-                        <img src="images/hero/projects-card.jpg" alt="Projects" class="img-cover">
+                        <img src="images/hero/photography-card.jpg" alt="Photography" class="img-cover">
                     </div>
                     <div class="card-content text-center">
-                        <h3 class="card-title">Projects</h3>
-                        <p class="card-description">Long-term creative endeavors that combine multiple disciplines and
-                            passions.</p>
+                        <h3 class="card-title">Photography</h3>
+                        <p class="card-description">Visual storytelling through the lens, capturing moments that
+                            preserve history and emotion.</p>
                     </div>
                 </a>
             </div>
@@ -223,7 +275,7 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>Adrian Chen</h3>
-                    <p>Photographer, Journalist, and Storyteller based in [Your Location]</p>
+                    <p>Photographer, Journalist, and Storyteller based in Lexington, Massachusetts</p>
                 </div>
 
                 <div class="footer-section">
@@ -231,18 +283,11 @@
                     <p><a href="about.html">About</a></p>
                     <p><a href="photography.html">Photography</a></p>
                     <p><a href="journalism/index.html">Journalism</a></p>
-                    <p><a href="projects.html">Projects</a></p>
                 </div>
 
                 <div class="footer-section">
                     <h3>Connect</h3>
-                    <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
-                    <div class="footer-social">
-                        <!-- Add your social media links -->
-                        <a href="#" aria-label="Instagram">📷</a>
-                        <a href="#" aria-label="LinkedIn">💼</a>
-                        <a href="#" aria-label="GitHub">🔗</a>
-                    </div>
+                    <p>Email: <a href="mailto:adriancngu@gmail.com">adriancngu@gmail.com</a></p>
                 </div>
             </div>
 
