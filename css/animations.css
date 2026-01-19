@@ -24,23 +24,51 @@
 }
 
 .reveal-stagger.active>*:nth-child(2) {
-    transition-delay: 0.1s;
+    transition-delay: 0.08s;
 }
 
 .reveal-stagger.active>*:nth-child(3) {
-    transition-delay: 0.2s;
+    transition-delay: 0.16s;
 }
 
 .reveal-stagger.active>*:nth-child(4) {
-    transition-delay: 0.3s;
+    transition-delay: 0.24s;
 }
 
 .reveal-stagger.active>*:nth-child(5) {
-    transition-delay: 0.4s;
+    transition-delay: 0.32s;
 }
 
 .reveal-stagger.active>*:nth-child(6) {
-    transition-delay: 0.5s;
+    transition-delay: 0.4s;
+}
+
+.reveal-stagger.active>*:nth-child(7) {
+    transition-delay: 0.48s;
+}
+
+.reveal-stagger.active>*:nth-child(8) {
+    transition-delay: 0.56s;
+}
+
+.reveal-stagger.active>*:nth-child(9) {
+    transition-delay: 0.64s;
+}
+
+.reveal-stagger.active>*:nth-child(10) {
+    transition-delay: 0.72s;
+}
+
+.reveal-stagger.active>*:nth-child(11) {
+    transition-delay: 0.8s;
+}
+
+.reveal-stagger.active>*:nth-child(12) {
+    transition-delay: 0.88s;
+}
+
+.reveal-stagger.active>*:nth-child(13) {
+    transition-delay: 0.96s;
 }
 
 .reveal-stagger.active>* {

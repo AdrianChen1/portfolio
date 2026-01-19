@@ -56,15 +56,54 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero" style="min-height: 60vh;">
+    <section class="hero" style="min-height: 60vh; padding-bottom: 0;">
         <div class="hero-content reveal text-center">
             <h1 class="hero-title">Photography</h1>
-            <p class="hero-subtitle">Capturing moments that tell stories</p>
+            <p class="hero-subtitle" style="margin-bottom: 0;">Capturing moments that tell stories</p>
         </div>
     </section>
 
+    <!-- Featured Showcase -->
+    <section style="padding: var(--space-md) 0 var(--space-lg) 0;">
+        <div class="container">
+            <div class="gallery-grid gallery-grid-fixed"
+                style="grid-template-columns: repeat(3, 1fr); max-width: 1000px; margin: 0 auto;">
+                <a href="photography/remember-the-fallen.html" class="gallery-item" style="aspect-ratio: 3/4;">
+                    <img src="images/photography/Revolutionary Spirit - Remember the Fallen.jpg"
+                        alt="Remember the Fallen">
+                    <div class="gallery-overlay">
+                        <div class="gallery-title">Fallen</div>
+                    </div>
+                </a>
+
+                <a href="photography/the-lone-drum.html" class="gallery-item" style="aspect-ratio: 3/4;">
+                    <img src="images/photography/Living History - The Lone Drum.jpg" alt="The Lone Drum">
+                    <div class="gallery-overlay">
+                        <div class="gallery-title">Lone Drum</div>
+                    </div>
+                </a>
+
+                <a href="photography/remembrance.html" class="gallery-item" style="aspect-ratio: 3/4;">
+                    <img src="images/photography/Revolutionary Spirit - Remembrance.jpg" alt="Remembrance">
+                    <div class="gallery-overlay">
+                        <div class="gallery-title">Memory</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        @media (max-width: 768px) {
+            section .gallery-grid[style*="repeat(3"] {
+                grid-template-columns: repeat(3, 1fr) !important;
+                gap: var(--space-xs);
+            }
+        }
+    </style>
+
     <!-- Introduction -->
-    <section>
+    <section style="padding: var(--space-md) 0;">
         <div class="container-narrow text-center">
             <div class="reveal">
                 <p class="text-secondary" style="font-size: 1.125rem;">
@@ -82,115 +121,185 @@
             <div class="project-collection-header reveal">
                 <h2 class="project-collection-title">Revolutionary Spirits</h2>
                 <p class="project-collection-description">
-                    A documentary series exploring historical reenactment and the individuals dedicated to preserving
-                    American Revolutionary history.
+                    Ghosted figures bridge past and present through half-exposure photography, capturing spirits
+                    who walk among us in Lexington's historic grounds.
                 </p>
-                <div class="project-collection-meta">2025 · Documentary Photography</div>
+                <div class="project-collection-meta">2025-2026 · Experimental Photography</div>
             </div>
 
             <div class="gallery-grid reveal-stagger">
-                <div class="gallery-item">
-                    <img src="images/photography/revolutionary-spirits-1.jpg" alt="Revolutionary Spirits 1">
+                <a href="photography/remember-the-fallen.html" class="gallery-item">
+                    <img src="images/photography/Revolutionary Spirit - Remember the Fallen.jpg"
+                        alt="Remember the Fallen">
                     <div class="gallery-overlay">
-                        <div class="gallery-title">The Fifer</div>
-                        <div class="gallery-description">Portrait of a young musician in period costume</div>
+                        <div class="gallery-title">Remember the Fallen</div>
+                        <div class="gallery-description">Serenading fallen brothers at Old Burial Ground</div>
                     </div>
-                </div>
+                </a>
 
-                <div class="gallery-item">
-                    <img src="images/photography/revolutionary-spirits-2.jpg" alt="Revolutionary Spirits 2">
+                <a href="photography/haunting-the-tavern.html" class="gallery-item">
+                    <img src="images/photography/Revolutionary Spirit - Haunting the Tavern.jpg"
+                        alt="Haunting the Tavern">
                     <div class="gallery-overlay">
-                        <div class="gallery-title">Morning Assembly</div>
-                        <div class="gallery-description">Corps members preparing for a reenactment</div>
+                        <div class="gallery-title">Haunting the Tavern</div>
+                        <div class="gallery-description">Standing triumphant at Buckman Tavern</div>
                     </div>
-                </div>
+                </a>
 
-                <div class="gallery-item">
-                    <img src="images/photography/revolutionary-spirits-3.jpg" alt="Revolutionary Spirits 3">
+                <a href="photography/an-angry-apparition.html" class="gallery-item">
+                    <img src="images/photography/Revolutionary Spirit - An Angry Apparition.jpg"
+                        alt="An Angry Apparition">
                     <div class="gallery-overlay">
-                        <div class="gallery-title">Living History</div>
-                        <div class="gallery-description">Bringing the past to life through dedication</div>
+                        <div class="gallery-title">An Angry Apparition</div>
+                        <div class="gallery-description">Walking through Lexington Center</div>
                     </div>
-                </div>
+                </a>
+
+                <a href="photography/rest-at-last.html" class="gallery-item">
+                    <img src="images/photography/Revolutionary Spirit - Rest, At Last.jpg" alt="Rest, At Last">
+                    <div class="gallery-overlay">
+                        <div class="gallery-title">Rest, At Last</div>
+                        <div class="gallery-description">A moment of peace at Plymouth Patuxet</div>
+                    </div>
+                </a>
+
+                <a href="photography/a-turning-point.html" class="gallery-item">
+                    <img src="images/photography/Revolutionary Spirit - A Turning Point.jpg" alt="A Turning Point">
+                    <div class="gallery-overlay">
+                        <div class="gallery-title">A Turning Point</div>
+                        <div class="gallery-description">Stepping from darkness into light</div>
+                    </div>
+                </a>
+
+                <a href="photography/a-call-to-the-dead.html" class="gallery-item">
+                    <img src="images/photography/Revolutionary Spirit - A Call to the Dead.jpg"
+                        alt="A Call to the Dead">
+                    <div class="gallery-overlay">
+                        <div class="gallery-title">A Call to the Dead</div>
+                        <div class="gallery-description">Playing fife among the graves</div>
+                    </div>
+                </a>
+
+                <a href="photography/the-carpenter.html" class="gallery-item">
+                    <img src="images/photography/Revolutionary Spirit - The Carpenter1.jpg" alt="The Carpenter">
+                    <div class="gallery-overlay">
+                        <div class="gallery-title">The Carpenter</div>
+                        <div class="gallery-description">Traditional craftsmanship at Plymouth Patuxet</div>
+                    </div>
+                </a>
+
+                <a href="photography/remembrance.html" class="gallery-item">
+                    <img src="images/photography/Revolutionary Spirit - Remembrance.jpg" alt="Remembrance">
+                    <div class="gallery-overlay">
+                        <div class="gallery-title">Remembrance</div>
+                        <div class="gallery-description">Walking toward sunset by the reservoir</div>
+                    </div>
+                </a>
+
+                <a href="photography/standing-strong.html" class="gallery-item">
+                    <img src="images/photography/Revolutionary Spirit - Standing Strong.jpg" alt="Standing Strong">
+                    <div class="gallery-overlay">
+                        <div class="gallery-title">Standing Strong</div>
+                        <div class="gallery-description">Confidence against autumn fire</div>
+                    </div>
+                </a>
+
+                <a href="photography/still-spirit.html" class="gallery-item">
+                    <img src="images/photography/Revolutionary Spirit - Still Spirit.jpg" alt="Still Spirit">
+                    <div class="gallery-overlay">
+                        <div class="gallery-title">Still Spirit</div>
+                        <div class="gallery-description">Surrounded by moving spirits</div>
+                    </div>
+                </a>
+
+                <a href="photography/guard-the-grave.html" class="gallery-item">
+                    <img src="images/photography/Revolutionary Spirit - Guard the Grave.jpg" alt="Guard the Grave">
+                    <div class="gallery-overlay">
+                        <div class="gallery-title">Guard the Grave</div>
+                        <div class="gallery-description">British soldier beside his grave</div>
+                    </div>
+                </a>
+
+                <a href="photography/a-spirit-moves-on.html" class="gallery-item">
+                    <img src="images/photography/Revolutionary Spirit - A Spirit Moves On.jpg" alt="A Spirit Moves On">
+                    <div class="gallery-overlay">
+                        <div class="gallery-title">A Spirit Moves On</div>
+                        <div class="gallery-description">Spirit escaping from regimental uniform</div>
+                    </div>
+                </a>
+
+                <a href="photography/past-and-present-unite.html" class="gallery-item">
+                    <img src="images/photography/Revolutionary Spirit - Past and Present Unite.jpg"
+                        alt="Past and Present Unite">
+                    <div class="gallery-overlay">
+                        <div class="gallery-title">Past and Present Unite</div>
+                        <div class="gallery-description">Walking toward the future</div>
+                    </div>
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- Project Collection 2: Cultural Landscapes -->
-    <section class="project-collection section-alt">
-        <div class="container">
-            <div class="project-collection-header reveal">
-                <h2 class="project-collection-title">Cultural Landscapes</h2>
-                <p class="project-collection-description">
-                    Exploring the relationship between place, memory, and identity through landscape and environmental
-                    photography.
-                </p>
-                <div class="project-collection-meta">2024-2025 · Landscape & Documentary</div>
-            </div>
-
-            <div class="gallery-grid reveal-stagger">
-                <div class="gallery-item">
-                    <img src="images/photography/landscape-1.jpg" alt="Cultural Landscape 1">
-                    <div class="gallery-overlay">
-                        <div class="gallery-title">Historic Grounds</div>
-                        <div class="gallery-description">Where history was made</div>
-                    </div>
-                </div>
-
-                <div class="gallery-item">
-                    <img src="images/photography/landscape-2.jpg" alt="Cultural Landscape 2">
-                    <div class="gallery-overlay">
-                        <div class="gallery-title">Seasonal Change</div>
-                        <div class="gallery-description">The passage of time in familiar places</div>
-                    </div>
-                </div>
-
-                <div class="gallery-item">
-                    <img src="images/photography/landscape-3.jpg" alt="Cultural Landscape 3">
-                    <div class="gallery-overlay">
-                        <div class="gallery-title">Silent Witnesses</div>
-                        <div class="gallery-description">Monuments to memory</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Project Collection 3: Portraits -->
+    <!-- Project Collection 2: Living History -->
     <section class="project-collection">
         <div class="container">
             <div class="project-collection-header reveal">
-                <h2 class="project-collection-title">Faces & Stories</h2>
+                <h2 class="project-collection-title">Living History</h2>
                 <p class="project-collection-description">
-                    Portrait work capturing the essence of individuals and the stories they carry.
+                    Documenting the Fife and Drum Corps journey—moments of camaraderie, tradition,
+                    and dedication to preserving Revolutionary heritage.
                 </p>
-                <div class="project-collection-meta">Ongoing · Portrait Photography</div>
+                <div class="project-collection-meta">2025-2026 · Documentary Photography</div>
             </div>
 
-            <div class="gallery-grid reveal-stagger">
-                <div class="gallery-item">
-                    <img src="images/photography/portrait-1.jpg" alt="Portrait 1">
+            <div class="gallery-grid gallery-grid-fixed reveal-stagger">
+                <a href="photography/the-cannoneer.html" class="gallery-item">
+                    <img src="images/photography/Living History - The Cannoneer.jpg" alt="The Cannoneer">
                     <div class="gallery-overlay">
-                        <div class="gallery-title">The Veteran</div>
-                        <div class="gallery-description">Stories etched in experience</div>
+                        <div class="gallery-title">The Cannoneer</div>
+                        <div class="gallery-description">Operating cannon at Marlborough Muster</div>
                     </div>
-                </div>
+                </a>
 
-                <div class="gallery-item">
-                    <img src="images/photography/portrait-2.jpg" alt="Portrait 2">
+                <a href="photography/the-march.html" class="gallery-item">
+                    <img src="images/photography/Living History - The March.jpg" alt="The March">
                     <div class="gallery-overlay">
-                        <div class="gallery-title">The Craftsman</div>
-                        <div class="gallery-description">Dedication to traditional arts</div>
+                        <div class="gallery-title">The March</div>
+                        <div class="gallery-description">Reenactors marching with pride</div>
                     </div>
-                </div>
+                </a>
 
-                <div class="gallery-item">
-                    <img src="images/photography/portrait-3.jpg" alt="Portrait 3">
+                <a href="photography/the-lone-drum.html" class="gallery-item">
+                    <img src="images/photography/Living History - The Lone Drum.jpg" alt="The Lone Drum">
                     <div class="gallery-overlay">
-                        <div class="gallery-title">Next Generation</div>
-                        <div class="gallery-description">Carrying traditions forward</div>
+                        <div class="gallery-title">The Lone Drum</div>
+                        <div class="gallery-description">William Diamond Juniors drum</div>
                     </div>
-                </div>
+                </a>
+
+                <a href="photography/togetherness.html" class="gallery-item">
+                    <img src="images/photography/Living History - Togetherness.jpg" alt="Togetherness">
+                    <div class="gallery-overlay">
+                        <div class="gallery-title">Togetherness</div>
+                        <div class="gallery-description">Young reenactors sharing joy</div>
+                    </div>
+                </a>
+
+                <a href="photography/a-closer-look.html" class="gallery-item">
+                    <img src="images/photography/Living History - A Closer Look.jpg" alt="A Closer Look">
+                    <div class="gallery-overlay">
+                        <div class="gallery-title">A Closer Look</div>
+                        <div class="gallery-description">Worn breeches and dress shoes</div>
+                    </div>
+                </a>
+
+                <a href="photography/a-well-needed-rest.html" class="gallery-item">
+                    <img src="images/photography/Living History - A Well Needed Rest.jpg" alt="A Well Needed Rest">
+                    <div class="gallery-overlay">
+                        <div class="gallery-title">A Well Needed Rest</div>
+                        <div class="gallery-description">Reenactor in line for food</div>
+                    </div>
+                </a>
             </div>
         </div>
     </section>

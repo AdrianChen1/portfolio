@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0K3S8BQDLB"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-0K3S8BQDLB');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The Carpenter - Photography by Adrian Chen">
+    <title>The Carpenter - Adrian Chen Photography</title>
+
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/navigation.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+
+    <style>
+        .photo-detail {
+            min-height: 100vh;
+            padding: calc(var(--nav-height) + var(--space-xl)) var(--space-md) var(--space-xl);
+        }
+
+        .photo-detail-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .photo-detail-header {
+            max-width: 800px;
+            margin: 0 auto var(--space-lg);
+            text-align: center;
+        }
+
+        .photo-detail-title {
+            font-size: clamp(2rem, 5vw, 3rem);
+            margin-bottom: var(--space-sm);
+        }
+
+        .photo-detail-meta {
+            color: var(--color-text-secondary);
+            font-size: var(--size-small);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: var(--space-md);
+        }
+
+        .photo-detail-description {
+            max-width: 800px;
+            margin: var(--space-lg) auto 0;
+            text-align: center;
+        }
+
+        .photo-detail-description p {
+            font-size: 1.125rem;
+            line-height: 1.8;
+            color: var(--color-text-secondary);
+        }
+
+        .photo-detail-image {
+            width: 100%;
+            max-width: 1200px;
+            max-height: 80vh;
+            height: auto;
+            object-fit: contain;
+            display: block;
+            margin: 0 auto;
+            border-radius: 4px;
+            box-shadow: 0 10px 40px rgba(28, 28, 28, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .photo-detail-image {
+                max-height: 70vh;
+            }
+        }
+
+        .photo-nav {
+            display: flex;
+            justify-content: space-between;
+            max-width: 800px;
+            margin: var(--space-xl) auto 0;
+            gap: var(--space-md);
+        }
+
+        .photo-nav-link {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-xs);
+            color: var(--color-accent);
+            font-weight: 500;
+            transition: transform var(--transition-fast);
+        }
+
+        .photo-nav-link:hover {
+            transform: translateX(-4px);
+        }
+
+        .photo-nav-link.next:hover {
+            transform: translateX(4px);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="../index.html" class="nav-logo">Adrian Chen</a>
+
+            <div class="nav-toggle">
+                <span class="nav-toggle-line"></span>
+                <span class="nav-toggle-line"></span>
+                <span class="nav-toggle-line"></span>
+            </div>
+
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="../about.html" class="nav-link">About</a></li>
+                <li class="nav-item">
+                    <a href="../journalism/index.html" class="nav-link">Journalism</a>
+                    <ul class="nav-dropdown">
+                        <li><a href="../journalism/articles/index.html" class="nav-dropdown-link">Articles</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="../photography.html" class="nav-link active">Photography</a></li>
+                <li class="nav-item"><a href="../projects.html" class="nav-link">Projects</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Photo Detail -->
+    <main class="photo-detail">
+        <div class="photo-detail-container">
+            <div class="photo-detail-header">
+                <div class="photo-detail-meta">Revolutionary Spirits · 2025</div>
+                <h1 class="photo-detail-title">The Carpenter</h1>
+            </div>
+
+            <img src="../images/photography/Revolutionary Spirit - The Carpenter1.jpg" alt="The Carpenter"
+                class="photo-detail-image">
+
+            <div class="photo-detail-description">
+                <p>
+                    A reenactor at Plymouth Patuxet Museum practices traditional woodworking, saw in hand, against a
+                    beautiful blue sky.
+                </p>
+            </div>
+
+            <div style="text-align: center; margin: var(--space-lg) auto;">
+                <a href="../photography.html" class="btn">← Back to Gallery</a>
+            </div>
+
+            <div class="photo-nav">
+                <a href="a-call-to-the-dead.html" class="photo-nav-link">← Previous Photo</a>
+                <a href="remembrance.html" class="photo-nav-link next">Next Photo →</a>
+            </div>
+        </div>
+    </main>
+
+    <script src="../js/navigation.js"></script>
+    <script>
+        // Initialize navigation on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            initNavigation();
+        });
+    </script>
+</body>
+
+</html>
