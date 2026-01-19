@@ -5,20 +5,22 @@
     left: 0;
     right: 0;
     height: var(--nav-height);
-    background-color: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
+    background-color: rgba(247, 245, 242, 0.25);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
     z-index: 1000;
-    transition: transform var(--transition-medium), box-shadow var(--transition-medium);
-    border-bottom: 1px solid transparent;
+    transition: background-color var(--transition-medium),
+        box-shadow var(--transition-medium),
+        backdrop-filter var(--transition-medium);
+    border-bottom: 1px solid rgba(218, 214, 208, 0.15);
 }
 
 .nav.scrolled {
-    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
-    border-bottom-color: var(--color-border);
-}
-
-.nav.hidden {
-    transform: translateY(-100%);
+    background-color: rgba(247, 245, 242, 0.5);
+    box-shadow: 0 2px 20px rgba(28, 28, 28, 0.08);
+    border-bottom-color: rgba(218, 214, 208, 0.4);
+    backdrop-filter: blur(25px) saturate(200%);
+    -webkit-backdrop-filter: blur(25px) saturate(200%);
 }
 
 .nav-container {
@@ -106,6 +108,27 @@
     background-color: var(--color-background-alt);
 }
 
+/* Mobile Menu Backdrop */
+.nav-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(28, 28, 28, 0.5);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity var(--transition-medium), visibility var(--transition-medium);
+    z-index: 999;
+}
+
+.nav-backdrop.active {
+    opacity: 1;
+    visibility: visible;
+}
+
 /* Mobile Menu Toggle */
 .nav-toggle {
     display: none;
@@ -146,13 +169,19 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background-color: var(--color-background);
+        background: linear-gradient(to bottom,
+                rgba(247, 245, 242, 0.98) 0%,
+                rgba(247, 245, 242, 0.95) 100%);
+        backdrop-filter: blur(20px) saturate(180%);
+        -webkit-backdrop-filter: blur(20px) saturate(180%);
         flex-direction: column;
         align-items: flex-start;
         padding: var(--space-lg) var(--space-md);
         gap: var(--space-md);
         transform: translateX(100%);
         transition: transform var(--transition-medium);
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
     }
 
     .nav-menu.active {

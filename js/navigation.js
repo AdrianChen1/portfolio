@@ -6,14 +6,40 @@ function initNavigation() {
     const navItems = document.querySelectorAll('.nav-item');
     let lastScrollY = window.scrollY;
 
+    // Create backdrop for mobile menu
+    const backdrop = document.createElement('div');
+    backdrop.classList.add('nav-backdrop');
+    document.body.appendChild(backdrop);
+
     // Mobile menu toggle
     if (navToggle) {
         navToggle.addEventListener('click', () => {
-            navToggle.classList.toggle('active');
+            const isActive = navToggle.classList.toggle('active');
             navMenu.classList.toggle('active');
-            document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
+            backdrop.classList.toggle('active');
+
+            // Lock/unlock body scroll
+            if (isActive) {
+                document.body.style.overflow = 'hidden';
+                document.body.style.position = 'fixed';
+                document.body.style.width = '100%';
+            } else {
+                document.body.style.overflow = '';
+                document.body.style.position = '';
+                document.body.style.width = '';
+            }
         });
     }
+
+    // Close mobile menu when clicking backdrop
+    backdrop.addEventListener('click', () => {
+        navToggle.classList.remove('active');
+        navMenu.classList.remove('active');
+        backdrop.classList.remove('active');
+        document.body.style.overflow = '';
+        document.body.style.position = '';
+        document.body.style.width = '';
+    });
 
     // Close mobile menu when clicking a link
     document.querySelectorAll('.nav-link').forEach(link => {
@@ -21,7 +47,10 @@ function initNavigation() {
             if (window.innerWidth <= 768) {
                 navToggle.classList.remove('active');
                 navMenu.classList.remove('active');
+                backdrop.classList.remove('active');
                 document.body.style.overflow = '';
+                document.body.style.position = '';
+                document.body.style.width = '';
             }
         });
     });
@@ -39,22 +68,15 @@ function initNavigation() {
         }
     });
 
-    // Hide/show navigation on scroll
+    // Update navigation style on scroll (glass effect)
     const handleScroll = debounce(() => {
         const currentScrollY = window.scrollY;
 
-        // Add scrolled class for styling
+        // Add scrolled class for enhanced glass effect
         if (currentScrollY > 50) {
             nav.classList.add('scrolled');
         } else {
             nav.classList.remove('scrolled');
-        }
-
-        // Hide nav on scroll down, show on scroll up
-        if (currentScrollY > lastScrollY && currentScrollY > 200) {
-            nav.classList.add('hidden');
-        } else {
-            nav.classList.remove('hidden');
         }
 
         lastScrollY = currentScrollY;

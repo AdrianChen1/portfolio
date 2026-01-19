@@ -67,14 +67,21 @@ a:hover {
     color: var(--color-background);
     border: 2px solid var(--color-accent);
     font-weight: 500;
-    transition: all var(--transition-medium);
+    transition: background-color var(--transition-medium),
+        border-color var(--transition-medium),
+        transform var(--transition-medium),
+        box-shadow var(--transition-medium);
     cursor: pointer;
+    will-change: transform;
+    backface-visibility: hidden;
+    transform: translateZ(0);
 }
 
 .btn:hover {
     background-color: var(--color-hover);
     border-color: var(--color-hover);
-    transform: translateY(-2px);
+    transform: translateY(-2px) translateZ(0);
+    box-shadow: 0 4px 12px rgba(28, 28, 28, 0.15);
 }
 
 .btn-outline {
