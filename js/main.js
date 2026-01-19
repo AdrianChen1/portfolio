@@ -1,9 +1,15 @@
 // Main JavaScript - Initialization
 document.addEventListener('DOMContentLoaded', () => {
+    console.log('=== PAGE LOADED ===');
+    console.log('About to initialize morphing images...');
+
     // Initialize all modules
     initNavigation();
     initScrollAnimations();
-    initGallery();
+    // initGallery(); // Not defined yet
+    initMorphingImages();
+
+    console.log('All modules initialized');
 
     // Add smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -56,6 +62,142 @@ function debounce(func, wait) {
         clearTimeout(timeout);
         timeout = setTimeout(later, wait);
     };
+}
+
+// Initialize morphing images animation
+function initMorphingImages() {
+    const morphingSection = document.getElementById('morphing-section');
+    if (!morphingSection) {
+        console.error('Morphing section not found');
+        return;
+    }
+
+    const img1 = document.getElementById('morph-img-1');
+    const img2 = document.getElementById('morph-img-2');
+    const img3 = document.getElementById('morph-img-3');
+    const captionTitle = document.getElementById('morph-title');
+    const captionLocation = document.getElementById('morph-location');
+
+    if (!img1 || !img2 || !img3 || !captionTitle || !captionLocation) {
+        console.error('Missing elements:', { img1, img2, img3, captionTitle, captionLocation });
+        return;
+    }
+
+    console.log('Morphing animation initialized successfully');
+
+    const captions = [
+        { title: 'The Carpenter', location: 'Captured in Plymouth Patuxet Historical Museum' },
+        { title: 'A Spirit Moves On', location: 'Captured using my signature half-exposure technique, I appear dressed in colonial garb, ghostlike, in a transitory state between the living and spiritual realm.' },
+        { title: 'Standing Strong', location: 'Dressed in traditional colonial clothing, a reenactor stands proud against the Autumn leaves.' }
+    ];
+
+    let currentCaption = 0;
+
+    function updateCaption(newIndex) {
+        if (currentCaption !== newIndex) {
+            // Fade out
+            captionTitle.style.opacity = '0';
+            captionLocation.style.opacity = '0';
+
+            // Wait for fade out, then update text and fade in
+            setTimeout(() => {
+                captionTitle.textContent = captions[newIndex].title;
+                captionLocation.textContent = captions[newIndex].location;
+                currentCaption = newIndex;
+
+                // Fade in
+                setTimeout(() => {
+                    captionTitle.style.opacity = '1';
+                    captionLocation.style.opacity = '1';
+                }, 150);
+            }, 600);
+        }
+    }
+
+    function updateMorphing() {
+        const sectionTop = morphingSection.offsetTop;
+        const sectionHeight = morphingSection.offsetHeight;
+        const scrollY = window.scrollY;
+        const windowHeight = window.innerHeight;
+
+        // How far we've scrolled into the section (can be negative if we haven't reached it yet)
+        const scrollIntoSection = scrollY - sectionTop;
+
+        // Only animate when we're actually in the section
+        if (scrollIntoSection < 0) {
+            // Before section - show first image
+            img1.style.opacity = '1';
+            img2.style.opacity = '0';
+            img3.style.opacity = '0';
+            updateCaption(0);
+            return;
+        }
+
+        if (scrollIntoSection > sectionHeight) {
+            // After section - show last image
+            img1.style.opacity = '0';
+            img2.style.opacity = '0';
+            img3.style.opacity = '1';
+            updateCaption(2);
+            return;
+        }
+
+        // Calculate progress (0 to 1) through the section
+        const progress = scrollIntoSection / sectionHeight;
+
+        console.log('MORPHING:', {
+            scrollY: Math.round(scrollY),
+            sectionTop: Math.round(sectionTop),
+            sectionHeight: Math.round(sectionHeight),
+            scrollIntoSection: Math.round(scrollIntoSection),
+            progress: progress.toFixed(3),
+            img1: img1.style.opacity,
+            img2: img2.style.opacity,
+            img3: img3.style.opacity
+        });
+
+        // Update images based on progress through the section
+        if (progress < 0.33) {
+            // First third: transition from image 1 to image 2
+            const localProgress = progress / 0.33; // 0 to 1 within this third
+            img1.style.opacity = String(1 - localProgress);
+            img2.style.opacity = String(localProgress);
+            img3.style.opacity = '0';
+
+            if (localProgress < 0.5) {
+                updateCaption(0);
+            } else {
+                updateCaption(1);
+            }
+        } else if (progress < 0.66) {
+            // Second third: transition from image 2 to image 3
+            const localProgress = (progress - 0.33) / 0.33; // 0 to 1 within this third
+            img1.style.opacity = '0';
+            img2.style.opacity = String(1 - localProgress);
+            img3.style.opacity = String(localProgress);
+
+            if (localProgress < 0.5) {
+                updateCaption(1);
+            } else {
+                updateCaption(2);
+            }
+        } else {
+            // Final third: show image 3
+            img1.style.opacity = '0';
+            img2.style.opacity = '0';
+            img3.style.opacity = '1';
+            updateCaption(2);
+        }
+    }
+
+    window.addEventListener('scroll', updateMorphing);
+    window.addEventListener('resize', updateMorphing);
+
+    // Initial update after a short delay to ensure page is fully loaded
+    setTimeout(() => {
+        console.log('Running initial morphing update');
+        updateMorphing();
+    }, 500);
 }
 
 // Add page transition effect
