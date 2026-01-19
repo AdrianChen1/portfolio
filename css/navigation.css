@@ -195,26 +195,32 @@
     }
 
     .nav-link {
+        display: block;
         font-size: 1.125rem;
         padding: var(--space-sm) 0;
+        width: 100%;
     }
 
     .nav-dropdown {
         position: static;
+        display: block !important;
         opacity: 1;
         visibility: visible;
         transform: none;
         box-shadow: none;
         border: none;
-        padding-left: var(--space-md);
-        margin-top: var(--space-xs);
+        background-color: transparent;
+        padding: 0 0 0 var(--space-md);
+        margin: 0;
+        min-width: auto;
+        width: 100%;
     }
 
-    .nav-item:hover .nav-dropdown {
-        display: none;
-    }
-
-    .nav-item.active .nav-dropdown {
+    .nav-dropdown-link {
         display: block;
+        font-size: 1rem;
+        padding: var(--space-xs) 0;
+        color: var(--color-text-secondary);
+        width: 100%;
     }
 }

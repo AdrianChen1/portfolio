@@ -41,31 +41,42 @@ function initNavigation() {
         document.body.style.width = '';
     });
 
-    // Close mobile menu when clicking a link
+    // Close mobile menu when clicking a link (but allow navigation)
     document.querySelectorAll('.nav-link').forEach(link => {
-        link.addEventListener('click', () => {
+        link.addEventListener('click', (e) => {
             if (window.innerWidth <= 768) {
-                navToggle.classList.remove('active');
-                navMenu.classList.remove('active');
-                backdrop.classList.remove('active');
-                document.body.style.overflow = '';
-                document.body.style.position = '';
-                document.body.style.width = '';
+                const parentItem = link.closest('.nav-item');
+                const hasDropdown = parentItem && parentItem.querySelector('.nav-dropdown');
+
+                // Always allow the link to work - just close menu after a delay
+                setTimeout(() => {
+                    navToggle.classList.remove('active');
+                    navMenu.classList.remove('active');
+                    backdrop.classList.remove('active');
+                    document.body.style.overflow = '';
+                    document.body.style.position = '';
+                    document.body.style.width = '';
+                }, 150);
             }
         });
     });
 
-    // Mobile dropdown toggle
-    navItems.forEach(item => {
-        const hasDropdown = item.querySelector('.nav-dropdown');
-        if (hasDropdown && window.innerWidth <= 768) {
-            item.addEventListener('click', (e) => {
-                if (e.target.closest('.nav-link') && !e.target.closest('.nav-dropdown')) {
-                    e.preventDefault();
-                    item.classList.toggle('active');
-                }
-            });
-        }
+    // Close mobile menu when clicking dropdown links
+    document.querySelectorAll('.nav-dropdown-link').forEach(link => {
+        link.addEventListener('click', (e) => {
+            if (window.innerWidth <= 768) {
+                // Stop propagation to prevent parent link from firing
+                e.stopPropagation();
+                setTimeout(() => {
+                    navToggle.classList.remove('active');
+                    navMenu.classList.remove('active');
+                    backdrop.classList.remove('active');
+                    document.body.style.overflow = '';
+                    document.body.style.position = '';
+                    document.body.style.width = '';
+                }, 150);
+            }
+        });
     });
 
     // Update navigation style on scroll (glass effect)
@@ -104,10 +115,16 @@ function initNavigation() {
 window.addEventListener('resize', debounce(() => {
     const navToggle = document.querySelector('.nav-toggle');
     const navMenu = document.querySelector('.nav-menu');
+    const backdrop = document.querySelector('.nav-backdrop');
 
     if (window.innerWidth > 768) {
         navToggle.classList.remove('active');
         navMenu.classList.remove('active');
+        if (backdrop) {
+            backdrop.classList.remove('active');
+        }
         document.body.style.overflow = '';
+        document.body.style.position = '';
+        document.body.style.width = '';
     }
 }, 250));
