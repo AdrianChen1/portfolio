@@ -84,7 +84,7 @@
             style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; opacity: 0.35; overflow: hidden;">
             <!-- Desktop Carousel -->
             <div class="carousel-track carousel-desktop"
-                style="display: flex; align-items: center; animation: scrollCarousel 50s linear infinite; width: fit-content; gap: 0;">
+                style="display: flex; align-items: center; animation: scrollCarousel 80s linear infinite; width: fit-content; gap: 0;">
                 <img src="images/photography/Living History - The March.jpg" alt=""
                     style="height: 100vh; width: 100vw; object-fit: cover; flex-shrink: 0;">
                 <img src="images/photography/Living History - The Cannoneer.jpg" alt=""
@@ -123,6 +123,14 @@
                     style="height: 100vh; width: 100vw; object-fit: cover; flex-shrink: 0;">
                 <img src="images/photography/Revolutionary Spirit - A Call to the Dead.jpg" alt=""
                     style="height: 100vh; width: 100vw; object-fit: cover; flex-shrink: 0;">
+            </div>
+
+            <!-- Edge fade overlays -->
+            <div
+                style="position: absolute; left: 0; top: 0; width: 10%; height: 100%; background: linear-gradient(to right, rgba(247, 245, 242, 0.8), rgba(247, 245, 242, 0)); pointer-events: none; z-index: 2;">
+            </div>
+            <div
+                style="position: absolute; right: 0; top: 0; width: 10%; height: 100%; background: linear-gradient(to left, rgba(247, 245, 242, 0.8), rgba(247, 245, 242, 0)); pointer-events: none; z-index: 2;">
             </div>
         </div>
 
@@ -413,7 +421,7 @@
             history.scrollRestoration = 'manual';
         }
 
-        // Carousel title updater
+        // Carousel title updater - synchronized with CSS animation
         (function () {
             const titles = [
                 'Living History | The March',
@@ -423,19 +431,39 @@
             ];
             const titleElement = document.querySelector('.carousel-title');
             const isMobile = window.innerWidth <= 768;
-            const duration = isMobile ? 28000 : 50000; // Duration matches animation
-            const interval = (duration / 4) * 0.95; // Change 5% earlier per cycle
-            let currentIndex = 0;
+            const duration = isMobile ? 28000 : 80000; // Duration matches animation (80s desktop, 28s mobile)
+            const imageCount = 4;
+            const startTime = Date.now();
+
+            function updateCaption() {
+                if (!titleElement) return;
+
+                // Calculate elapsed time since page load
+                const elapsed = Date.now() - startTime;
+                // Calculate position in the full cycle (0 to 1)
+                const cycleProgress = (elapsed % duration) / duration;
+                // Determine which image (0-3) - change 5% early
+                const imageIndex = Math.floor(cycleProgress * imageCount * 1.05) % imageCount;
+
+                // Only update if changed
+                if (titleElement.dataset.currentIndex !== String(imageIndex)) {
+                    titleElement.style.opacity = '0';
+                    setTimeout(() => {
+                        titleElement.textContent = titles[imageIndex];
+                        titleElement.style.opacity = '1';
+                        titleElement.dataset.currentIndex = String(imageIndex);
+                    }, 300);
+                }
+            }
 
             if (titleElement) {
-                setInterval(function () {
-                    currentIndex = (currentIndex + 1) % 4;
-                    titleElement.style.opacity = '0';
-                    setTimeout(function () {
-                        titleElement.textContent = titles[currentIndex];
-                        titleElement.style.opacity = '1';
-                    }, 300);
-                }, interval);
+                // Initialize
+                titleElement.textContent = titles[0];
+                titleElement.style.opacity = '1';
+                titleElement.dataset.currentIndex = '0';
+
+                // Update every 100ms to stay in sync
+                setInterval(updateCaption, 100);
             }
         })();
     </script>
