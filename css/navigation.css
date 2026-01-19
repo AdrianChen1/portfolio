@@ -168,7 +168,7 @@
         top: var(--nav-height);
         left: 0;
         right: 0;
-        bottom: 0;
+        height: calc(100vh - var(--nav-height));
         background: linear-gradient(to bottom,
                 rgba(247, 245, 242, 0.98) 0%,
                 rgba(247, 245, 242, 0.95) 100%);
@@ -176,8 +176,9 @@
         -webkit-backdrop-filter: blur(20px) saturate(180%);
         flex-direction: column;
         align-items: flex-start;
-        padding: var(--space-lg) var(--space-md);
-        gap: var(--space-md);
+        justify-content: flex-start;
+        padding: var(--space-xl) var(--space-lg);
+        gap: var(--space-lg);
         transform: translateX(100%);
         transition: transform var(--transition-medium);
         overflow-y: auto;
@@ -186,6 +187,16 @@
 
     .nav-menu.active {
         transform: translateX(0);
+    }
+
+    .nav-item {
+        width: 100%;
+        font-size: 1.125rem;
+    }
+
+    .nav-link {
+        font-size: 1.125rem;
+        padding: var(--space-sm) 0;
     }
 
     .nav-dropdown {
