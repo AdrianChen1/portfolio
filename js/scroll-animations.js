@@ -3,8 +3,8 @@ function initScrollAnimations() {
     // Configuration for Intersection Observer
     const observerOptions = {
         root: null,
-        rootMargin: '0px',
-        threshold: 0.1
+        rootMargin: '100px 0px',
+        threshold: 0.05
     };
 
     // Callback function for observer
@@ -12,10 +12,8 @@ function initScrollAnimations() {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('active');
-            } else {
-                // Remove 'active' class when element leaves viewport
-                // This allows the animation to replay when scrolling back
-                entry.target.classList.remove('active');
+                // Once animated, stop observing to prevent re-triggering
+                observer.unobserve(entry.target);
             }
         });
     };

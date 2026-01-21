@@ -86,7 +86,7 @@ function initMorphingImages() {
     console.log('Morphing animation initialized successfully');
 
     const captions = [
-        { title: 'A Spirit Moves On', location: 'A half-exposure image captured in Buckman Tavern in Lexington, Massachusetts' },
+        { title: 'A Spirit Moves On', location: 'Using tripod & half exposure technique, I capture myself in regimental uniform; a ghostly trail emenates behind me, evoking the spirit of the revolution.' },
         { title: 'The Carpenter', location: 'Captured in Plymouth Patuxet Historical Museum' },
         { title: 'Standing Strong', location: 'A powerful, low angle display of a reenactor contrasted against vibrant Autumn foliage' }
     ];
