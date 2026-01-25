@@ -110,6 +110,16 @@ function initMorphingImages() {
                 captionLocation.textContent = captions[newIndex].location;
                 currentCaption = newIndex;
 
+                // Apply special positioning for Carpenter on mobile
+                const captionContainer = document.getElementById('morph-caption');
+                if (captionContainer) {
+                    if (newIndex === 1) { // Carpenter is index 1
+                        captionContainer.classList.add('carpenter-position');
+                    } else {
+                        captionContainer.classList.remove('carpenter-position');
+                    }
+                }
+
                 // Update award badge content
                 if (awardBadge) {
                     if (captions[newIndex].award === 'silver') {
