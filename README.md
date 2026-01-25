@@ -1,42 +1,13 @@
 # Adrian Chen Portfolio
 
-A minimal, professional portfolio website showcasing photography, journalism, and projects.
+This website serves as a public portfolio for my work as a high school journalist and photographer. The site brings together reported articles, photo essays, and long-term visual projects that examine how historical memory is preserved, performed, and reinterpreted in the present.
 
-## 🚀 Quick Start
+My work focuses in particular on Revolutionary-era traditions, music, and living history in New England. Through reporting and photography, I document the ways history exists not only in archives and monuments, but in sound, ritual, landscape, and everyday community practice.
 
-1. Open `index.html` in your browser to view the site locally
-2. Edit content directly in the HTML files
-3. Add new articles by creating markdown files in `journalism/articles/content/`
+The site is designed to be minimal, accessible, and content-first, functioning both as a professional portfolio and as a long-term archive for ongoing work.
 
-## 📁 Structure
+All writing, photography, and visual materials on this site are original content unless otherwise noted.
 
-- `index.html` - Home page
-- `about.html` - About page
-- `photography.html` - Photography gallery
-- `projects.html` - Projects showcase
-- `journalism/` - Journalism and articles section
-- `css/` - All stylesheets
-- `js/` - JavaScript functionality
-- `images/` - All images organized by section
-
-## 🎨 Adding Content
-
-### New Article
-1. Create a markdown file in `journalism/articles/content/`
-2. Add frontmatter with title, description, date, etc.
-3. Write your article in Markdown
-4. The article will automatically appear in the articles list
-
-### New Photo Project
-1. Add images to `images/photography/project-name/`
-2. Update `photography.html` with the new project
-
-### Updating Pages
-Edit the HTML files directly - all content is clearly marked with comments.
-
-## 🌐 Deployment
-
-Push to GitHub and enable GitHub Pages in repository settings.
 
 ## 📝 License
 
