@@ -58,13 +58,31 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero" style="min-height: 60vh;">
-        <div class="hero-content reveal text-center">
+    <section class="hero" style="min-height: 60vh; position: relative; overflow: hidden;">
+        <!-- Background Image -->
+        <div
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 150%; z-index: 0; opacity: 0; animation: fadeInBackground 1.5s ease-in-out 0.5s forwards;">
+            <img src="../images/photography/past and present.png" alt="Past and Present"
+                style="width: 100%; height: 100%; object-fit: cover; object-position: center 30%; opacity: 0.15; filter: grayscale(20%);">
+        </div>
+
+        <div class="hero-content reveal text-center" style="position: relative; z-index: 1;">
             <h1 class="hero-title">Journalism</h1>
-            <p class="hero-subtitle">Stories that matter, told with depth and care <br> This webpage is still under
-                development - please check back soon for updates!</p>
+            <p class="hero-subtitle">Stories that matter, told with depth and care</p>
         </div>
     </section>
+
+    <style>
+        @keyframes fadeInBackground {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
 
     <!-- Introduction -->
     <section>
@@ -93,31 +111,40 @@
                 <!-- Featured Article 1 -->
                 <div class="card hover-lift">
                     <div class="card-image">
-                        <img src="../images/articles/drum-echo.jpg" alt="The Drum's Echo" class="img-cover">
+                        <img src="../images/articles/carlafortmann.jpg" alt="The Work of Remembering" class="img-cover">
                     </div>
                     <div class="card-content">
-                        <h3 class="card-title">Work in progress</h3>
+                        <h3 class="card-title">The Work of Remembering</h3>
                         <p class="card-description">
-                            Work in progress
+                            For decades, Carla Fortmann has helped ensure that the history surrounding the Lexington
+                            Battle Green remains not just preserved, but understood.
                         </p>
                         <div class="card-meta">
                             <span>Adrian Chen</span>
-                            <span>January 2026</span>
-                            <span>8 min read</span>
+                            <span>December 25, 2025</span>
+                            <span>3 min read</span>
                         </div>
+                        <a href="articles/the-work-of-remembering.html" class="btn btn-outline mt-sm">Read Article</a>
                     </div>
                 </div>
 
                 <!-- Featured Article 2 -->
                 <div class="card hover-lift">
                     <div class="card-image">
-                        <img src="../images/articles/living-memory.jpg" alt="Living Memory" class="img-cover">
+                        <img src="../images/articles/chrismyers.jpg" alt="The Sound Came First" class="img-cover">
                     </div>
                     <div class="card-content">
-                        <h3 class="card-title">Work in Progress</h3>
+                        <h3 class="card-title">The Sound Came First</h3>
+                        <p class="card-description">
+                            An interview with Chris Myers, Head Fife Instructor of the William Diamond Junior Fife and
+                            Drum Corps, on how music keeps history alive.
+                        </p>
                         <div class="card-meta">
                             <span>Adrian Chen</span>
+                            <span>January 26, 2026</span>
+                            <span>6 min read</span>
                         </div>
+                        <a href="articles/the-sound-came-first.html" class="btn btn-outline mt-sm">Read Article</a>
                     </div>
                 </div>
             </div>
