@@ -192,13 +192,11 @@
     <section id="morphing-section" style="height: 500vh; position: relative;">
         <div id="morphing-container"
             style="position: sticky; top: 0; height: 100vh; width: 100%; overflow: hidden; display: flex; align-items: center; justify-content: center; background-color: #F7F5F2;">
-            <img id="morph-img-1" src="images/photography/Revolutionary Spirit - A Spirit Moves On.jpg"
-                alt="A Spirit Moves On"
+            <img id="morph-img-1" src="images/photography/Revolutionary Spirit - Onward!.jpg" alt="Onward!"
                 style="position: absolute; width: 100%; height: 100%; object-fit: contain; opacity: 1;">
             <img id="morph-img-2" src="images/photography/Revolutionary Spirit - The Carpenter1.jpg" alt="The Carpenter"
                 style="position: absolute; width: 100%; height: 100%; object-fit: contain; opacity: 0;">
-            <img id="morph-img-3" src="images/photography/Revolutionary Spirit - Standing Strong.jpg"
-                alt="Standing Strong"
+            <img id="morph-img-3" src="images/photography/Revolutionary Spirit - Remembrance.jpg" alt="Remembrance"
                 style="position: absolute; width: 100%; height: 100%; object-fit: contain; opacity: 0;">
 
             <!-- Caption Text - Positioned on the left side -->
@@ -206,11 +204,20 @@
                 style="position: absolute; left: 60px; top: 50%; transform: translateY(-50%); text-align: left; z-index: 10; max-width: 350px; background-color: rgba(247, 245, 242, 0.95); padding: 24px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
                 <p id="morph-title"
                     style="font-size: 1.75rem; font-weight: 600; margin: 0; color: #1C1C1C; line-height: 1.3; transition: opacity 0.6s ease;">
-                    A Spirit Moves On</p>
+                    Onward!</p>
                 <p id="morph-location"
                     style="font-size: 0.95rem; margin: 0.75rem 0 0; color: #2E4057; line-height: 1.5; transition: opacity 0.6s ease;">
-                    Using my tripod & half exposure technique, I capture myself in regimental uniform; a ghostly trail
-                    emenates behind me, evoking the spirit of the revolution.</p>
+                    Using my tripod & half exposure technique, I capture myself in regimental uniform as streaks of
+                    light emit behind me from a car, blended by the long exposure.</p>
+            </div>
+
+            <!-- Award Badge - Positioned on the right side -->
+            <div id="morph-award"
+                style="position: absolute; right: 60px; top: 50%; transform: translateY(-50%); text-align: center; z-index: 10; max-width: 280px; background-color: rgba(247, 245, 242, 0.95); padding: 20px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); transition: opacity 0.6s ease;">
+                <p style="font-size: 0.9rem; font-weight: 500; margin: 0 0 12px 0; color: #1C1C1C; line-height: 1.4;">
+                    Scholastic Art & Writing Awards (Regional) — Silver Key (Photography)</p>
+                <img src="images/photography/SilverKey.png" alt="Silver Key Award"
+                    style="width: 80px; height: auto; display: block; margin: 0 auto;">
             </div>
         </div>
     </section>
@@ -220,19 +227,40 @@
             #morph-caption {
                 left: 20px !important;
                 right: 20px !important;
-                bottom: 20px !important;
+                bottom: 140px !important;
                 top: auto !important;
                 transform: none !important;
                 max-width: none !important;
-                padding: 16px !important;
+                padding: 14px !important;
+            }
+
+            #morph-award {
+                left: 20px !important;
+                right: 20px !important;
+                bottom: 25px !important;
+                top: auto !important;
+                transform: none !important;
+                max-width: none !important;
+                padding: 10px !important;
+            }
+
+            #morph-award p {
+                font-size: 0.75rem !important;
+                margin-bottom: 6px !important;
+                line-height: 1.3 !important;
+            }
+
+            #morph-award img {
+                width: 50px !important;
             }
 
             #morph-title {
-                font-size: 1.25rem !important;
+                font-size: 1.2rem !important;
             }
 
             #morph-location {
-                font-size: 0.85rem !important;
+                font-size: 0.8rem !important;
+                line-height: 1.4 !important;
             }
         }
     </style>

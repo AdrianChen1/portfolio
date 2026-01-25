@@ -1,15 +1,10 @@
 // Main JavaScript - Initialization
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('=== PAGE LOADED ===');
-    console.log('About to initialize morphing images...');
-
     // Initialize all modules
     initNavigation();
     initScrollAnimations();
     // initGallery(); // Not defined yet
     initMorphingImages();
-
-    console.log('All modules initialized');
 
     // Add smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -68,7 +63,6 @@ function debounce(func, wait) {
 function initMorphingImages() {
     const morphingSection = document.getElementById('morphing-section');
     if (!morphingSection) {
-        console.error('Morphing section not found');
         return;
     }
 
@@ -77,18 +71,28 @@ function initMorphingImages() {
     const img3 = document.getElementById('morph-img-3');
     const captionTitle = document.getElementById('morph-title');
     const captionLocation = document.getElementById('morph-location');
+    const awardBadge = document.getElementById('morph-award');
 
     if (!img1 || !img2 || !img3 || !captionTitle || !captionLocation) {
-        console.error('Missing elements:', { img1, img2, img3, captionTitle, captionLocation });
         return;
     }
 
-    console.log('Morphing animation initialized successfully');
-
     const captions = [
-        { title: 'A Spirit Moves On', location: 'Using tripod & half exposure technique, I capture myself in regimental uniform; a ghostly trail emenates behind me, evoking the spirit of the revolution.' },
-        { title: 'The Carpenter', location: 'Captured in Plymouth Patuxet Historical Museum' },
-        { title: 'Standing Strong', location: 'A powerful, low angle display of a reenactor contrasted against vibrant Autumn foliage' }
+        {
+            title: 'Onward!',
+            location: 'Using my tripod & half exposure technique, I capture myself in regimental uniform as streaks of light emit behind me from a car, blended by the long exposure.',
+            award: 'silver'
+        },
+        {
+            title: 'The Carpenter',
+            location: 'Reenactor saws wood; captured in Plymouth Patuxet Historical Museum.',
+            award: null
+        },
+        {
+            title: 'Remembrance',
+            location: 'A Lexington reenactor walks along the reservoir at dusk, where Revolutionary memory and present-day landscape quietly intersect.',
+            award: 'honorable'
+        }
     ];
 
     let currentCaption = 0;
@@ -98,6 +102,7 @@ function initMorphingImages() {
             // Fade out
             captionTitle.style.opacity = '0';
             captionLocation.style.opacity = '0';
+            if (awardBadge) awardBadge.style.opacity = '0';
 
             // Wait for fade out, then update text and fade in
             setTimeout(() => {
@@ -105,10 +110,32 @@ function initMorphingImages() {
                 captionLocation.textContent = captions[newIndex].location;
                 currentCaption = newIndex;
 
+                // Update award badge content
+                if (awardBadge) {
+                    if (captions[newIndex].award === 'silver') {
+                        awardBadge.innerHTML = `
+                            <p style="font-size: 0.9rem; font-weight: 500; margin: 0 0 12px 0; color: #1C1C1C; line-height: 1.4;">
+                                Scholastic Art & Writing Awards (Regional) — Silver Key (Photography)</p>
+                            <img src="images/photography/SilverKey.png" alt="Silver Key Award"
+                                style="width: 80px; height: auto; display: block; margin: 0 auto;">
+                        `;
+                    } else if (captions[newIndex].award === 'honorable') {
+                        awardBadge.innerHTML = `
+                            <p style="font-size: 0.9rem; font-weight: 500; margin: 0; color: #1C1C1C; line-height: 1.4;">
+                                Scholastic Art & Writing Awards (Regional) — Honorable Mention (Photography)</p>
+                        `;
+                    } else {
+                        awardBadge.innerHTML = '';
+                    }
+                }
+
                 // Fade in
                 setTimeout(() => {
                     captionTitle.style.opacity = '1';
                     captionLocation.style.opacity = '1';
+                    if (awardBadge && captions[newIndex].award) {
+                        awardBadge.style.opacity = '1';
+                    }
                 }, 150);
             }, 600);
         }
@@ -144,17 +171,6 @@ function initMorphingImages() {
 
         // Calculate progress (0 to 1) through the section
         const progress = scrollIntoSection / sectionHeight;
-
-        console.log('MORPHING:', {
-            scrollY: Math.round(scrollY),
-            sectionTop: Math.round(sectionTop),
-            sectionHeight: Math.round(sectionHeight),
-            scrollIntoSection: Math.round(scrollIntoSection),
-            progress: progress.toFixed(3),
-            img1: img1.style.opacity,
-            img2: img2.style.opacity,
-            img3: img3.style.opacity
-        });
 
         // Update images based on progress through the section
         if (progress < 0.33) {
@@ -197,7 +213,6 @@ function initMorphingImages() {
 
     // Initial update after a short delay to ensure page is fully loaded
     setTimeout(() => {
-        console.log('Running initial morphing update');
         updateMorphing();
     }, 500);
 }
