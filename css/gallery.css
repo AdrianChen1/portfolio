@@ -10,6 +10,12 @@
     grid-template-columns: repeat(3, 1fr);
 }
 
+/* Featured showcase keeps 3 columns on all screen sizes */
+.gallery-grid-showcase {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: var(--space-xs);
+}
+
 @media (max-width: 768px) {
     .gallery-grid-fixed {
         grid-template-columns: repeat(2, 1fr);
@@ -46,6 +52,19 @@
 
 .gallery-item:hover img {
     transform: scale(1.1);
+}
+
+/* Entry animation for gallery items — higher specificity than .gallery-item to override transition */
+.gallery-item.slide-fade-up {
+    opacity: 0;
+    transform: translateY(35px);
+    transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gallery-item.slide-fade-up.active {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .gallery-overlay {

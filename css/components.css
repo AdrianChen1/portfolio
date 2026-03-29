@@ -229,8 +229,38 @@
     font-size: var(--size-small);
 }
 
+/* Home Page Carousel */
+@keyframes scrollCarousel {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.carousel-track {
+    will-change: transform;
+}
+
+.carousel-desktop {
+    display: flex;
+}
+
+.carousel-mobile {
+    display: none;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
+    .carousel-desktop {
+        display: none;
+    }
+
+    .carousel-mobile {
+        display: flex;
+    }
 
     .grid-2,
     .grid-3,

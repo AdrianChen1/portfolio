@@ -1,7 +1,7 @@
 /* Scroll Animations */
 .reveal {
     opacity: 0;
-    transform: translateY(50px);
+    transform: translateY(28px);
     transition: opacity var(--animation-duration) var(--animation-timing),
         transform var(--animation-duration) var(--animation-timing);
 }
@@ -14,7 +14,7 @@
 /* Staggered Animations */
 .reveal-stagger>* {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(20px);
     transition: opacity var(--animation-duration) var(--animation-timing),
         transform var(--animation-duration) var(--animation-timing);
 }

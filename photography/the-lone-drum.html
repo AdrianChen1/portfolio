@@ -13,10 +13,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="The Lone Drum - Photography by Adrian Chen">
+    <!-- Open Graph -->
+    <meta property="og:title" content="The Lone Drum — Adrian Chen">
+    <meta property="og:description" content="The Lone Drum - Photography by Adrian Chen">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://adrianchen1.github.io/portfolio/photography/the-lone-drum.html">
+    <meta property="og:image" content="https://adrianchen1.github.io/portfolio/images/photography/previewimage.jpg">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="The Lone Drum — Adrian Chen">
+    <meta name="twitter:description" content="The Lone Drum - Photography by Adrian Chen">
+    <meta name="twitter:image" content="https://adrianchen1.github.io/portfolio/images/photography/previewimage.jpg">
     <title>The Lone Drum - Adrian Chen Photography</title>
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="../images/photography/favicon.ico">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap">
 
 
     <link rel="stylesheet" href="../css/reset.css">
@@ -26,92 +41,8 @@
     <link rel="stylesheet" href="../css/components.css">
     <link rel="stylesheet" href="../css/animations.css">
     <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/photo-detail.css">
 
-    <style>
-        .photo-detail {
-            min-height: 100vh;
-            padding: calc(var(--nav-height) + var(--space-xl)) var(--space-md) var(--space-xl);
-        }
-
-        .photo-detail-container {
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .photo-detail-header {
-            max-width: 800px;
-            margin: 0 auto var(--space-lg);
-            text-align: center;
-        }
-
-        .photo-detail-title {
-            font-size: clamp(2rem, 5vw, 3rem);
-            margin-bottom: var(--space-sm);
-        }
-
-        .photo-detail-meta {
-            color: var(--color-text-secondary);
-            font-size: var(--size-small);
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            margin-bottom: var(--space-md);
-        }
-
-        .photo-detail-description {
-            max-width: 800px;
-            margin: var(--space-lg) auto 0;
-            text-align: center;
-        }
-
-        .photo-detail-description p {
-            font-size: 1.125rem;
-            line-height: 1.8;
-            color: var(--color-text-secondary);
-        }
-
-        .photo-detail-image {
-            width: 100%;
-            max-width: 1200px;
-            max-height: 80vh;
-            height: auto;
-            object-fit: contain;
-            display: block;
-            margin: 0 auto;
-            border-radius: 4px;
-            box-shadow: 0 10px 40px rgba(28, 28, 28, 0.1);
-        }
-
-        @media (max-width: 768px) {
-            .photo-detail-image {
-                max-height: 70vh;
-            }
-        }
-
-        .photo-nav {
-            display: flex;
-            justify-content: space-between;
-            max-width: 800px;
-            margin: var(--space-xl) auto 0;
-            gap: var(--space-md);
-        }
-
-        .photo-nav-link {
-            display: inline-flex;
-            align-items: center;
-            gap: var(--space-xs);
-            color: var(--color-accent);
-            font-weight: 500;
-            transition: transform var(--transition-fast);
-        }
-
-        .photo-nav-link:hover {
-            transform: translateX(-4px);
-        }
-
-        .photo-nav-link.next:hover {
-            transform: translateX(4px);
-        }
-    </style>
 </head>
 
 <body>
@@ -170,6 +101,32 @@
         </div>
     </main>
 
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Adrian Chen</h3>
+                    <p>Photographer, Journalist, and Storyteller</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <p><a href="../about.html">About</a></p>
+                    <p><a href="../photography.html">Photography</a></p>
+                    <p><a href="../journalism/index.html">Journalism</a></p>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect</h3>
+                    <p>Email: <a href="mailto:adriancngu@gmail.com">adriancngu@gmail.com</a></p>
+                    <p>LinkedIn: <a href="https://www.linkedin.com/in/adrianchenbh/" target="_blank" rel="noopener noreferrer">linkedin.com/in/adrianchenbh</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Adrian Chen. All rights reserved.</p>
+                <p style="margin-top: 0.5rem; font-size: 0.875rem;">All text and photography on this site are original works unless otherwise noted.</p>
+            </div>
+        </div>
+    </footer>
     <script src="../js/navigation.js"></script>
     <script>
         // Initialize navigation on page load

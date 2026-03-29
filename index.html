@@ -35,6 +35,11 @@
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="images/photography/favicon.ico">
 
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap">
+
     <!-- Stylesheets -->
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/variables.css">
@@ -84,7 +89,7 @@
             style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; opacity: 0.35; overflow: hidden;">
             <!-- Desktop Carousel -->
             <div class="carousel-track carousel-desktop"
-                style="display: flex; align-items: center; animation: scrollCarousel 80s linear infinite; width: fit-content; gap: 0;">
+                style="display: flex; align-items: center; animation: scrollCarousel 56s linear infinite; width: fit-content; gap: 0;">
                 <img src="images/photography/Living History - The March.jpg" alt=""
                     style="height: 100vh; width: 100vw; object-fit: cover; flex-shrink: 0;">
                 <img src="images/photography/Living History - The Cannoneer.jpg" alt=""
@@ -105,7 +110,7 @@
             </div>
             <!-- Mobile Carousel -->
             <div class="carousel-track carousel-mobile"
-                style="display: none; align-items: center; animation: scrollCarousel 28s linear infinite; width: fit-content; gap: 0;">
+                style="display: none; align-items: center; animation: scrollCarousel 20s linear infinite; width: fit-content; gap: 0;">
                 <img src="images/photography/Living History - The March.jpg" alt=""
                     style="height: 100vh; width: 100vw; object-fit: cover; flex-shrink: 0;">
                 <img src="images/photography/Living History - The Cannoneer.jpg" alt=""
@@ -136,43 +141,8 @@
 
         <!-- Carousel Image Title Overlay -->
         <div class="carousel-title"
-            style="position: absolute; bottom: 2rem; left: 2rem; z-index: 10; color: white; font-size: 0.9rem; font-family: 'Lora', Georgia, serif; transition: opacity 0.6s ease; background: rgba(0, 0, 0, 0.4); padding: 0.5rem 0.875rem; border-radius: 4px; backdrop-filter: blur(4px);">
+            style="position: absolute; bottom: 2rem; left: 2rem; z-index: 10; color: white; font-size: 0.9rem; font-family: var(--font-accent); transition: opacity 0.35s ease; background: rgba(0, 0, 0, 0.4); padding: 0.5rem 0.875rem; border-radius: 4px; backdrop-filter: blur(4px);">
             Living History | The March</div>
-
-        <style>
-            /* Updated: 2025-01-31 - Fixed carousel animation with separate desktop/mobile */
-            @keyframes scrollCarousel {
-                0% {
-                    transform: translateX(0);
-                }
-
-                100% {
-                    transform: translateX(-50%);
-                }
-            }
-
-            .carousel-track {
-                will-change: transform;
-            }
-
-            .carousel-desktop {
-                display: flex;
-            }
-
-            .carousel-mobile {
-                display: none;
-            }
-
-            @media (max-width: 768px) {
-                .carousel-desktop {
-                    display: none;
-                }
-
-                .carousel-mobile {
-                    display: flex;
-                }
-            }
-        </style>
 
         <div class="hero-content reveal" style="position: relative; z-index: 1;">
             <h1 class="hero-title">Adrian Chen</h1>
@@ -195,25 +165,25 @@
             <img id="morph-img-1" src="images/photography/Revolutionary Spirit - Onward!.jpg" alt="Onward!"
                 style="position: absolute; width: 100%; height: 100%; object-fit: contain; opacity: 1;">
             <img id="morph-img-2" src="images/photography/Revolutionary Spirit - The Carpenter1.jpg" alt="The Carpenter"
-                style="position: absolute; width: 100%; height: 100%; object-fit: contain; opacity: 0;">
+                loading="lazy" style="position: absolute; width: 100%; height: 100%; object-fit: contain; opacity: 0;">
             <img id="morph-img-3" src="images/photography/Revolutionary Spirit - Remembrance.jpg" alt="Remembrance"
-                style="position: absolute; width: 100%; height: 100%; object-fit: contain; opacity: 0;">
+                loading="lazy" style="position: absolute; width: 100%; height: 100%; object-fit: contain; opacity: 0;">
 
             <!-- Caption Text - Positioned on the left side -->
             <div id="morph-caption"
                 style="position: absolute; left: 60px; top: 50%; transform: translateY(-50%); text-align: left; z-index: 10; max-width: 350px; background-color: rgba(247, 245, 242, 0.95); padding: 24px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
                 <p id="morph-title"
-                    style="font-size: 1.75rem; font-weight: 600; margin: 0; color: #1C1C1C; line-height: 1.3; transition: opacity 0.6s ease;">
+                    style="font-size: 1.75rem; font-weight: 600; margin: 0; color: #1C1C1C; line-height: 1.3; transition: opacity 0.25s ease;">
                     Onward!</p>
                 <p id="morph-location"
-                    style="font-size: 0.95rem; margin: 0.75rem 0 0; color: #2E4057; line-height: 1.5; transition: opacity 0.6s ease;">
+                    style="font-size: 0.95rem; margin: 0.75rem 0 0; color: #2E4057; line-height: 1.5; transition: opacity 0.25s ease;">
                     Using my tripod & half exposure technique, I capture myself in regimental uniform as streaks of
                     light emit behind me from a car, blended by the long exposure.</p>
             </div>
 
             <!-- Award Badge - Positioned on the right side -->
             <div id="morph-award"
-                style="position: absolute; right: 60px; top: 50%; transform: translateY(-50%); text-align: center; z-index: 10; max-width: 280px; background-color: rgba(247, 245, 242, 0.95); padding: 20px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); transition: opacity 0.6s ease;">
+                style="position: absolute; right: 60px; top: 50%; transform: translateY(-50%); text-align: center; z-index: 10; max-width: 280px; background-color: rgba(247, 245, 242, 0.95); padding: 20px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); transition: opacity 0.25s ease;">
                 <p style="font-size: 0.9rem; font-weight: 500; margin: 0 0 12px 0; color: #1C1C1C; line-height: 1.4;">
                     Scholastic Art & Writing Awards (Regional) — Silver Key (Photography)</p>
                 <img src="images/photography/SilverKey.png" alt="Silver Key Award"
@@ -222,55 +192,6 @@
         </div>
     </section>
 
-    <style>
-        @media (max-width: 768px) {
-            #morph-caption {
-                left: 20px !important;
-                right: 20px !important;
-                bottom: 100px !important;
-                top: auto !important;
-                transform: none !important;
-                max-width: none !important;
-                padding: 12px !important;
-                transition: bottom 0.6s ease !important;
-            }
-
-            /* Special positioning for Carpenter - much lower */
-            #morph-caption.carpenter-position {
-                bottom: 40px !important;
-            }
-
-            #morph-award {
-                left: 20px !important;
-                right: 20px !important;
-                bottom: 15px !important;
-                top: auto !important;
-                transform: none !important;
-                max-width: none !important;
-                padding: 8px !important;
-                transition: bottom 0.6s ease !important;
-            }
-
-            #morph-award p {
-                font-size: 0.7rem !important;
-                margin-bottom: 5px !important;
-                line-height: 1.3 !important;
-            }
-
-            #morph-award img {
-                width: 40px !important;
-            }
-
-            #morph-title {
-                font-size: 1.1rem !important;
-            }
-
-            #morph-location {
-                font-size: 0.75rem !important;
-                line-height: 1.3 !important;
-            }
-        }
-    </style>
     <!-- Introduction Section -->
     <section id="introduction" class="section-alt">
         <div class="container-narrow">
@@ -489,14 +410,14 @@
                     currentDeviceMode = newDeviceMode;
                 }
 
-                const duration = isMobile ? 28000 : 80000; // 28s mobile, 80s desktop
+                const duration = isMobile ? 20000 : 56000; // 20s mobile, 56s desktop
 
                 // Calculate elapsed time since page load (or mode change)
                 const elapsed = Date.now() - startTime;
                 // Calculate position in the full cycle (0 to 1)
                 const cycleProgress = (elapsed % duration) / duration;
-                // Determine which image (0-3) - multiply by 1.15 to switch ~15% earlier
-                const imageIndex = Math.floor(cycleProgress * imageCount * 1.15) % imageCount;
+                // Determine which image (0-3) synced to CSS animation position
+                const imageIndex = Math.floor(cycleProgress * imageCount) % imageCount;
 
                 // Only update if changed
                 if (titleElement.dataset.currentIndex !== String(imageIndex)) {
@@ -505,7 +426,7 @@
                         titleElement.textContent = titles[imageIndex];
                         titleElement.style.opacity = '1';
                         titleElement.dataset.currentIndex = String(imageIndex);
-                    }, 300);
+                    }, 200);
                 }
             }
 

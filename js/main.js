@@ -110,16 +110,6 @@ function initMorphingImages() {
                 captionLocation.textContent = captions[newIndex].location;
                 currentCaption = newIndex;
 
-                // Apply special positioning for Carpenter on mobile
-                const captionContainer = document.getElementById('morph-caption');
-                if (captionContainer) {
-                    if (newIndex === 1) { // Carpenter is index 1
-                        captionContainer.classList.add('carpenter-position');
-                    } else {
-                        captionContainer.classList.remove('carpenter-position');
-                    }
-                }
-
                 // Update award badge content
                 if (awardBadge) {
                     if (captions[newIndex].award === 'silver') {
@@ -146,8 +136,8 @@ function initMorphingImages() {
                     if (awardBadge && captions[newIndex].award) {
                         awardBadge.style.opacity = '1';
                     }
-                }, 150);
-            }, 600);
+                }, 80);
+            }, 250);
         }
     }
 
@@ -218,8 +208,8 @@ function initMorphingImages() {
         }
     }
 
-    window.addEventListener('scroll', updateMorphing);
-    window.addEventListener('resize', updateMorphing);
+    window.addEventListener('scroll', () => requestAnimationFrame(updateMorphing));
+    window.addEventListener('resize', () => requestAnimationFrame(updateMorphing));
 
     // Initial update after a short delay to ensure page is fully loaded
     setTimeout(() => {

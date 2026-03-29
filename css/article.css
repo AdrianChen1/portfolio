@@ -219,6 +219,27 @@
     color: inherit;
 }
 
+/* Article Reading Progress Bar */
+.article-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100vh;
+    background-color: rgba(30, 30, 30, 0.1);
+    z-index: 999;
+}
+
+.article-progress-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background: linear-gradient(to bottom, var(--color-accent), var(--color-text-primary));
+    transition: height 0.1s ease-out;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .article-card {

@@ -21,12 +21,8 @@ function initNavigation() {
             // Lock/unlock body scroll
             if (isActive) {
                 document.body.style.overflow = 'hidden';
-                document.body.style.position = 'fixed';
-                document.body.style.width = '100%';
             } else {
                 document.body.style.overflow = '';
-                document.body.style.position = '';
-                document.body.style.width = '';
             }
         });
     }
@@ -37,8 +33,6 @@ function initNavigation() {
         navMenu.classList.remove('active');
         backdrop.classList.remove('active');
         document.body.style.overflow = '';
-        document.body.style.position = '';
-        document.body.style.width = '';
     });
 
     // Close mobile menu when clicking a link (but allow navigation)
@@ -54,8 +48,6 @@ function initNavigation() {
                     navMenu.classList.remove('active');
                     backdrop.classList.remove('active');
                     document.body.style.overflow = '';
-                    document.body.style.position = '';
-                    document.body.style.width = '';
                 }, 150);
             }
         });
@@ -72,8 +64,6 @@ function initNavigation() {
                     navMenu.classList.remove('active');
                     backdrop.classList.remove('active');
                     document.body.style.overflow = '';
-                    document.body.style.position = '';
-                    document.body.style.width = '';
                 }, 150);
             }
         });
@@ -124,7 +114,5 @@ window.addEventListener('resize', debounce(() => {
             backdrop.classList.remove('active');
         }
         document.body.style.overflow = '';
-        document.body.style.position = '';
-        document.body.style.width = '';
     }
 }, 250));

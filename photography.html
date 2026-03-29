@@ -16,10 +16,28 @@
     <meta name="description"
         content="Photography portfolio by Adrian Chen - Documenting history, culture, and human stories through the lens.">
     <meta name="author" content="Adrian Chen">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Photography — Adrian Chen">
+    <meta property="og:description" content="Documentary and experimental photography exploring Revolutionary-era history, living memory, and tradition in New England.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://adrianchen1.github.io/portfolio/photography.html">
+    <meta property="og:image" content="https://adrianchen1.github.io/portfolio/images/photography/previewimage.jpg">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Photography — Adrian Chen">
+    <meta name="twitter:description" content="Documentary and experimental photography exploring Revolutionary-era history, living memory, and tradition in New England.">
+    <meta name="twitter:image" content="https://adrianchen1.github.io/portfolio/images/photography/previewimage.jpg">
+
     <title>Photography - Adrian Chen</title>
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="images/photography/favicon.ico">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap">
 
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/variables.css">
@@ -68,9 +86,9 @@
     <!-- Featured Showcase -->
     <section style="padding: var(--space-md) 0 var(--space-lg) 0;">
         <div class="container">
-            <div class="gallery-grid gallery-grid-fixed reveal-stagger"
-                style="grid-template-columns: repeat(3, 1fr); max-width: 1000px; margin: 0 auto;">
-                <a href="photography/remember-the-fallen.html" class="gallery-item" style="aspect-ratio: 3/4;">
+            <div class="gallery-grid gallery-grid-fixed gallery-grid-showcase"
+                style="max-width: 1000px; margin: 0 auto;">
+                <a href="photography/remember-the-fallen.html" class="gallery-item slide-fade-up" style="aspect-ratio: 3/4;">
                     <img src="images/photography/Revolutionary Spirit - Remember the Fallen.jpg"
                         alt="Remember the Fallen">
                     <div class="gallery-overlay">
@@ -78,14 +96,14 @@
                     </div>
                 </a>
 
-                <a href="photography/the-lone-drum.html" class="gallery-item" style="aspect-ratio: 3/4;">
+                <a href="photography/the-lone-drum.html" class="gallery-item slide-fade-up" style="aspect-ratio: 3/4;">
                     <img src="images/photography/Living History - The Lone Drum.jpg" alt="The Lone Drum">
                     <div class="gallery-overlay">
                         <div class="gallery-title">Lone Drum</div>
                     </div>
                 </a>
 
-                <a href="photography/remembrance.html" class="gallery-item" style="aspect-ratio: 3/4;">
+                <a href="photography/remembrance.html" class="gallery-item slide-fade-up" style="aspect-ratio: 3/4;">
                     <img src="images/photography/Revolutionary Spirit - Remembrance.jpg" alt="Remembrance">
                     <div class="gallery-overlay">
                         <div class="gallery-title">Memory</div>
@@ -97,15 +115,6 @@
             </div>
         </div>
     </section>
-
-    <style>
-        @media (max-width: 768px) {
-            section .gallery-grid[style*="repeat(3"] {
-                grid-template-columns: repeat(3, 1fr) !important;
-                gap: var(--space-xs);
-            }
-        }
-    </style>
 
     <!-- Introduction -->
     <section style="padding: var(--space-md) 0;">
@@ -132,60 +141,60 @@
                 <div class="project-collection-meta">2025-2026 · Experimental Photography</div>
             </div>
 
-            <div class="gallery-grid reveal-stagger">
-                <a href="photography/remember-the-fallen.html" class="gallery-item">
+            <div class="gallery-grid">
+                <a href="photography/remember-the-fallen.html" class="gallery-item slide-fade-up">
                     <img src="images/photography/Revolutionary Spirit - Remember the Fallen.jpg"
-                        alt="Remember the Fallen">
+                        alt="Remember the Fallen" loading="lazy">
                     <div class="gallery-overlay">
                         <div class="gallery-title">Remember the Fallen</div>
                         <div class="gallery-description">Serenading fallen brothers at Old Burial Ground</div>
                     </div>
                 </a>
 
-                <a href="photography/haunting-the-tavern.html" class="gallery-item">
+                <a href="photography/haunting-the-tavern.html" class="gallery-item slide-fade-up">
                     <img src="images/photography/Revolutionary Spirit - Haunting the Tavern.jpg"
-                        alt="Haunting the Tavern">
+                        alt="Haunting the Tavern" loading="lazy">
                     <div class="gallery-overlay">
                         <div class="gallery-title">Haunting the Tavern</div>
                         <div class="gallery-description">Standing triumphant at Buckman Tavern</div>
                     </div>
                 </a>
 
-                <a href="photography/an-angry-apparition.html" class="gallery-item">
+                <a href="photography/an-angry-apparition.html" class="gallery-item slide-fade-up">
                     <img src="images/photography/Revolutionary Spirit - An Angry Apparition.jpg"
-                        alt="An Angry Apparition">
+                        alt="An Angry Apparition" loading="lazy">
                     <div class="gallery-overlay">
                         <div class="gallery-title">An Angry Apparition</div>
                         <div class="gallery-description">Walking through Lexington Center</div>
                     </div>
                 </a>
 
-                <a href="photography/lost-memory.html" class="gallery-item">
-                    <img src="images/photography/Revolutionary Spirit - Lost Memory.jpg" alt="Lost Memory">
+                <a href="photography/lost-memory.html" class="gallery-item slide-fade-up">
+                    <img src="images/photography/Revolutionary Spirit - Lost Memory.jpg" alt="Lost Memory" loading="lazy">
                     <div class="gallery-overlay">
                         <div class="gallery-title">Lost Memory</div>
                         <div class="gallery-description">Sitting halfway through reality and memory</div>
                     </div>
                 </a>
 
-                <a href="photography/rest-at-last.html" class="gallery-item">
-                    <img src="images/photography/Revolutionary Spirit - Rest, At Last.jpg" alt="Rest, At Last">
+                <a href="photography/rest-at-last.html" class="gallery-item slide-fade-up">
+                    <img src="images/photography/Revolutionary Spirit - Rest, At Last.jpg" alt="Rest, At Last" loading="lazy">
                     <div class="gallery-overlay">
                         <div class="gallery-title">Rest, At Last</div>
                         <div class="gallery-description">A moment of peace at Plymouth Patuxet</div>
                     </div>
                 </a>
 
-                <a href="photography/a-turning-point.html" class="gallery-item">
-                    <img src="images/photography/Revolutionary Spirit - A Turning Point.jpg" alt="A Turning Point">
+                <a href="photography/a-turning-point.html" class="gallery-item slide-fade-up">
+                    <img src="images/photography/Revolutionary Spirit - A Turning Point.jpg" alt="A Turning Point" loading="lazy">
                     <div class="gallery-overlay">
                         <div class="gallery-title">A Turning Point</div>
                         <div class="gallery-description">Stepping from darkness into light</div>
                     </div>
                 </a>
 
-                <a href="photography/pensive.html" class="gallery-item">
-                    <img src="images/photography/Revolutionary Spirit - Pensive.jpg" alt="Pensive">
+                <a href="photography/pensive.html" class="gallery-item slide-fade-up">
+                    <img src="images/photography/Revolutionary Spirit - Pensive.jpg" alt="Pensive" loading="lazy">
                     <div class="gallery-overlay">
                         <div class="gallery-title">Pensive</div>
                         <div class="gallery-description">Inside a historical building at Plymouth's historical museum
@@ -193,25 +202,25 @@
                     </div>
                 </a>
 
-                <a href="photography/a-call-to-the-dead.html" class="gallery-item">
+                <a href="photography/a-call-to-the-dead.html" class="gallery-item slide-fade-up">
                     <img src="images/photography/Revolutionary Spirit - A Call to the Dead.jpg"
-                        alt="A Call to the Dead">
+                        alt="A Call to the Dead" loading="lazy">
                     <div class="gallery-overlay">
                         <div class="gallery-title">A Call to the Dead</div>
                         <div class="gallery-description">Playing fife among the graves</div>
                     </div>
                 </a>
 
-                <a href="photography/the-carpenter.html" class="gallery-item">
-                    <img src="images/photography/Revolutionary Spirit - The Carpenter1.jpg" alt="The Carpenter">
+                <a href="photography/the-carpenter.html" class="gallery-item slide-fade-up">
+                    <img src="images/photography/Revolutionary Spirit - The Carpenter1.jpg" alt="The Carpenter" loading="lazy">
                     <div class="gallery-overlay">
                         <div class="gallery-title">The Carpenter</div>
                         <div class="gallery-description">Traditional craftsmanship at Plymouth Patuxet</div>
                     </div>
                 </a>
 
-                <a href="photography/remembrance.html" class="gallery-item">
-                    <img src="images/photography/Revolutionary Spirit - Remembrance.jpg" alt="Remembrance">
+                <a href="photography/remembrance.html" class="gallery-item slide-fade-up">
+                    <img src="images/photography/Revolutionary Spirit - Remembrance.jpg" alt="Remembrance" loading="lazy">
                     <div class="gallery-overlay">
                         <div class="gallery-title">Remembrance</div>
                         <div class="gallery-description">Walking toward sunset by the reservoir</div>
@@ -221,49 +230,49 @@
                     </div>
                 </a>
 
-                <a href="photography/standing-strong.html" class="gallery-item">
-                    <img src="images/photography/Revolutionary Spirit - Standing Strong.jpg" alt="Standing Strong">
+                <a href="photography/standing-strong.html" class="gallery-item slide-fade-up">
+                    <img src="images/photography/Revolutionary Spirit - Standing Strong.jpg" alt="Standing Strong" loading="lazy">
                     <div class="gallery-overlay">
                         <div class="gallery-title">Standing Strong</div>
                         <div class="gallery-description">Confidence against autumn leaves</div>
                     </div>
                 </a>
 
-                <a href="photography/still-spirit.html" class="gallery-item">
-                    <img src="images/photography/Revolutionary Spirit - Still Spirit.jpg" alt="Still Spirit">
+                <a href="photography/still-spirit.html" class="gallery-item slide-fade-up">
+                    <img src="images/photography/Revolutionary Spirit - Still Spirit.jpg" alt="Still Spirit" loading="lazy">
                     <div class="gallery-overlay">
                         <div class="gallery-title">Still Spirit</div>
                         <div class="gallery-description">Surrounded by moving spirits</div>
                     </div>
                 </a>
 
-                <a href="photography/guard-the-grave.html" class="gallery-item">
-                    <img src="images/photography/Revolutionary Spirit - Guard the Grave.jpg" alt="Guard the Grave">
+                <a href="photography/guard-the-grave.html" class="gallery-item slide-fade-up">
+                    <img src="images/photography/Revolutionary Spirit - Guard the Grave.jpg" alt="Guard the Grave" loading="lazy">
                     <div class="gallery-overlay">
                         <div class="gallery-title">Guard the Grave</div>
                         <div class="gallery-description">British soldier beside his grave</div>
                     </div>
                 </a>
 
-                <a href="photography/a-spirit-moves-on.html" class="gallery-item">
-                    <img src="images/photography/Revolutionary Spirit - A Spirit Moves On.jpg" alt="A Spirit Moves On">
+                <a href="photography/a-spirit-moves-on.html" class="gallery-item slide-fade-up">
+                    <img src="images/photography/Revolutionary Spirit - A Spirit Moves On.jpg" alt="A Spirit Moves On" loading="lazy">
                     <div class="gallery-overlay">
                         <div class="gallery-title">A Spirit Moves On</div>
                         <div class="gallery-description">Spirit "escaping" the Earth</div>
                     </div>
                 </a>
 
-                <a href="photography/past-and-present-unite.html" class="gallery-item">
+                <a href="photography/past-and-present-unite.html" class="gallery-item slide-fade-up">
                     <img src="images/photography/Revolutionary Spirit - Past and Present Unite.jpg"
-                        alt="Past and Present Unite">
+                        alt="Past and Present Unite" loading="lazy">
                     <div class="gallery-overlay">
                         <div class="gallery-title">Past and Present Unite</div>
                         <div class="gallery-description">Walking toward the future</div>
                     </div>
                 </a>
 
-                <a href="photography/onward.html" class="gallery-item">
-                    <img src="images/photography/Revolutionary Spirit - Onward!.jpg" alt="Onward!">
+                <a href="photography/onward.html" class="gallery-item slide-fade-up">
+                    <img src="images/photography/Revolutionary Spirit - Onward!.jpg" alt="Onward!" loading="lazy">
                     <div class="gallery-overlay">
                         <div class="gallery-title"
                             style="display: flex; align-items: center; gap: 0.5rem; justify-content: center;">
@@ -292,73 +301,73 @@
                 <div class="project-collection-meta">2025-2026 · Documentary Photography</div>
             </div>
 
-            <div class="gallery-grid gallery-grid-fixed reveal-stagger">
-                <a href="photography/the-cannoneer.html" class="gallery-item">
-                    <img src="images/photography/Living History - The Cannoneer.jpg" alt="The Cannoneer">
+            <div class="gallery-grid gallery-grid-fixed">
+                <a href="photography/the-cannoneer.html" class="gallery-item slide-fade-up">
+                    <img src="images/photography/Living History - The Cannoneer.jpg" alt="The Cannoneer" loading="lazy">
                     <div class="gallery-overlay">
                         <div class="gallery-title">The Cannoneer</div>
                         <div class="gallery-description">Operating cannon at Marlborough Muster</div>
                     </div>
                 </a>
 
-                <a href="photography/the-cannon.html" class="gallery-item">
-                    <img src="images/photography/Living History - The Cannon.jpg" alt="The Cannon">
+                <a href="photography/the-cannon.html" class="gallery-item slide-fade-up">
+                    <img src="images/photography/Living History - The Cannon.jpg" alt="The Cannon" loading="lazy">
                     <div class="gallery-overlay">
                         <div class="gallery-title">The Cannon</div>
                         <div class="gallery-description">The Cannon rests after a long day of use</div>
                     </div>
                 </a>
 
-                <a href="photography/the-march.html" class="gallery-item">
-                    <img src="images/photography/Living History - The March.jpg" alt="The March">
+                <a href="photography/the-march.html" class="gallery-item slide-fade-up">
+                    <img src="images/photography/Living History - The March.jpg" alt="The March" loading="lazy">
                     <div class="gallery-overlay">
                         <div class="gallery-title">The March</div>
                         <div class="gallery-description">Reenactors marching with pride</div>
                     </div>
                 </a>
 
-                <a href="photography/the-lone-drum.html" class="gallery-item">
-                    <img src="images/photography/Living History - The Lone Drum.jpg" alt="The Lone Drum">
+                <a href="photography/the-lone-drum.html" class="gallery-item slide-fade-up">
+                    <img src="images/photography/Living History - The Lone Drum.jpg" alt="The Lone Drum" loading="lazy">
                     <div class="gallery-overlay">
                         <div class="gallery-title">The Lone Drum</div>
                         <div class="gallery-description">William Diamond Juniors drum</div>
                     </div>
                 </a>
 
-                <a href="photography/in-thought.html" class="gallery-item">
-                    <img src="images/photography/Living History - In Thought.jpg" alt="In Thought">
+                <a href="photography/in-thought.html" class="gallery-item slide-fade-up">
+                    <img src="images/photography/Living History - In Thought.jpg" alt="In Thought" loading="lazy">
                     <div class="gallery-overlay">
                         <div class="gallery-title">In Thought</div>
                         <div class="gallery-description">Bass drummer, deep in thought</div>
                     </div>
                 </a>
 
-                <a href="photography/togetherness.html" class="gallery-item">
-                    <img src="images/photography/Living History - Togetherness.jpg" alt="Togetherness">
+                <a href="photography/togetherness.html" class="gallery-item slide-fade-up">
+                    <img src="images/photography/Living History - Togetherness.jpg" alt="Togetherness" loading="lazy">
                     <div class="gallery-overlay">
                         <div class="gallery-title">Togetherness</div>
                         <div class="gallery-description">Young reenactors sharing joy</div>
                     </div>
                 </a>
 
-                <a href="photography/interlude.html" class="gallery-item">
-                    <img src="images/photography/Living History - Interlude.jpg" alt="Interlude">
+                <a href="photography/interlude.html" class="gallery-item slide-fade-up">
+                    <img src="images/photography/Living History - Interlude.jpg" alt="Interlude" loading="lazy">
                     <div class="gallery-overlay">
                         <div class="gallery-title">Interlude</div>
                         <div class="gallery-description">Awaiting their calling</div>
                     </div>
                 </a>
 
-                <a href="photography/a-closer-look.html" class="gallery-item">
-                    <img src="images/photography/Living History - A Closer Look.jpg" alt="A Closer Look">
+                <a href="photography/a-closer-look.html" class="gallery-item slide-fade-up">
+                    <img src="images/photography/Living History - A Closer Look.jpg" alt="A Closer Look" loading="lazy">
                     <div class="gallery-overlay">
                         <div class="gallery-title">A Closer Look</div>
                         <div class="gallery-description">Worn breeches and dress shoes</div>
                     </div>
                 </a>
 
-                <a href="photography/a-well-needed-rest.html" class="gallery-item">
-                    <img src="images/photography/Living History - A Well Needed Rest.jpg" alt="A Well Needed Rest">
+                <a href="photography/a-well-needed-rest.html" class="gallery-item slide-fade-up">
+                    <img src="images/photography/Living History - A Well Needed Rest.jpg" alt="A Well Needed Rest" loading="lazy">
                     <div class="gallery-overlay">
                         <div class="gallery-title">A Well Needed Rest</div>
                         <div class="gallery-description">Reenactor in line for food</div>
@@ -401,11 +410,6 @@
                     <p>Email: <a href="mailto:adriancngu@gmail.com">adriancngu@gmail.com</a></p>
                     <p>LinkedIn: <a href="https://www.linkedin.com/in/adrianchenbh/" target="_blank"
                             rel="noopener noreferrer">linkedin.com/in/adrianchenbh</a></p>
-                    <div class="footer-social">
-                        <a href="#" aria-label="Instagram">📷</a>
-                        <a href="#" aria-label="LinkedIn">💼</a>
-                        <a href="#" aria-label="GitHub">🔗</a>
-                    </div>
                 </div>
             </div>
 

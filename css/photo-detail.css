@@ -1,0 +1,122 @@
+/* Photo Detail Page Styles */
+/* Shared across all photography detail pages in /photography/*.html */
+
+.photo-detail {
+    min-height: 100vh;
+    padding: calc(var(--nav-height) + var(--space-xl)) var(--space-md) var(--space-xl);
+}
+
+.photo-detail-container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.photo-detail-header {
+    max-width: 800px;
+    margin: 0 auto var(--space-lg);
+    text-align: center;
+}
+
+.photo-detail-title {
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin-bottom: var(--space-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-direction: column;
+}
+
+.photo-detail-title img {
+    width: 50px;
+    height: auto;
+}
+
+.photo-detail-meta {
+    color: var(--color-text-secondary);
+    font-size: var(--size-small);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: var(--space-md);
+}
+
+.photo-detail-subtitle {
+    font-style: italic;
+    font-size: 0.95rem;
+    color: var(--color-text-secondary);
+    margin-top: var(--space-xs);
+}
+
+.photo-detail-award {
+    margin-top: var(--space-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-sm);
+    flex-wrap: wrap;
+}
+
+.photo-detail-description {
+    max-width: 800px;
+    margin: var(--space-lg) auto 0;
+    text-align: center;
+}
+
+.photo-detail-description p {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: var(--color-text-secondary);
+}
+
+.photo-detail-image {
+    width: 100%;
+    max-width: 1200px;
+    max-height: 80vh;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+    border-radius: 4px;
+    box-shadow: 0 10px 40px rgba(28, 28, 28, 0.1);
+}
+
+.photo-nav {
+    display: flex;
+    justify-content: space-between;
+    max-width: 800px;
+    margin: var(--space-xl) auto 0;
+    gap: var(--space-md);
+}
+
+.photo-nav-link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-xs);
+    color: var(--color-accent);
+    font-weight: 500;
+    transition: transform var(--transition-fast);
+}
+
+.photo-nav-link:hover {
+    transform: translateX(-4px);
+}
+
+.photo-nav-link.next:hover {
+    transform: translateX(4px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .photo-detail-image {
+        max-height: 70vh;
+    }
+
+    .photo-nav {
+        flex-direction: column;
+        gap: var(--space-sm);
+    }
+
+    .photo-nav-link.next {
+        text-align: right;
+    }
+}

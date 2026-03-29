@@ -3,7 +3,7 @@ function initScrollAnimations() {
     // Configuration for Intersection Observer
     const observerOptions = {
         root: null,
-        rootMargin: '100px 0px',
+        rootMargin: '0px 0px -30px 0px',
         threshold: 0.05
     };
 
@@ -22,7 +22,7 @@ function initScrollAnimations() {
     const observer = new IntersectionObserver(observerCallback, observerOptions);
 
     // Observe all elements with reveal classes
-    const revealElements = document.querySelectorAll('.reveal, .reveal-stagger, .scale-in, .slide-in-left, .slide-in-right, .fade-in-up');
+    const revealElements = document.querySelectorAll('.reveal, .reveal-stagger, .scale-in, .slide-in-left, .slide-in-right, .fade-in-up, .slide-fade-up, .slide-fade-left, .slide-fade-right');
 
     revealElements.forEach(element => {
         observer.observe(element);
